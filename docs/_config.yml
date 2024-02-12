@@ -106,8 +106,8 @@ analytics:
 # Site Author
 author:
   name             : "RAG"
-  avatar           : "/assets/images/RAG_icon.png"
-  bio              : "Authoring Tools for Multimedia Content"
+  avatar           : "/assets/images/rag_icon.png"
+  bio              : "Retrieval-Augmented Generation"
   location         : # "Somewhere"
   email            : "trec-RAG-organizers@googlegroups.com"
   links:
