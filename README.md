@@ -1,2 +1,2 @@
-# trec-rag.github.io
-Website for TREC RAG
+# TREC RAG Track
+Website for the TREC RAG Track.
