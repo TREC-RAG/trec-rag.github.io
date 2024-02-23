@@ -19,8 +19,8 @@ minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "RAG"
 title_separator          : "-"
-subtitle                 : "Retrieval-Augmented Generation" # site tagline that appears below site title in masthead
-name                     : "Retrieval-Augmented Generation (RAG)"
+subtitle                 : "TREC Retrieval-Augmented Generation" # site tagline that appears below site title in masthead
+name                     : "TREC Retrieval-Augmented Generation (RAG)"
 description              : "TREC RAG Official Website"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -156,7 +156,7 @@ footer:
       # url:
     - label: "Discord"
       icon: "fab fa-fw fa-discord"
-      url: "https://discord.gg/rb39BH5zNH"
+      url: "https://discord.gg/2JpTEZyG7c"
 
 
 # Reading Files
