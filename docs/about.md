@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /
 title: "What is TREC RAG?"
 ---
 
@@ -34,9 +34,9 @@ The proposed evaluation methodology for the TREC 2024 RAG track is as follows:
 
 ## Tasks
 
-1- **Retrieval Task** : Rank passages for a given query
+1- **Retrieval Task** : Rank passages for a given query.
 
-2- **RAG Task** : Generate answers with attributions to supporting passages
+2- **RAG Task** : Generate answers with attributions to supporting passages.
 
 ## Timeline
 
