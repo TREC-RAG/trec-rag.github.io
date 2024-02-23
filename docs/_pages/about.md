@@ -34,15 +34,16 @@ The proposed evaluation methodology for the TREC 2024 RAG track is as follows:
 
 ## Tasks
 
-1- **Retrieval Task** : Rank passages for a given queries
+1- **Retrieval Task** : Rank passages for a given query
 
-2- **RAG Task** : Generate answers with supporting passage attributes
+2- **RAG Task** : Generate answers with attributions to supporting passages
 
 ## Timeline
 
-Runs should be due ~ end of July. Granular details will be released soon.
+Runs should be due around the end of July. More granular timeline will be released soon.
 
-## Organizers of RAG 2024
+## Organizers of TREC RAG 2024
+
 - Ronak Pradeep, University of Waterloo
 - Nandan Thakur, University of Waterloo
 - Jimmy Lin, University of Waterloo
