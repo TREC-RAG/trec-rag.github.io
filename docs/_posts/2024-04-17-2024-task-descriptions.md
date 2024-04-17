@@ -11,7 +11,7 @@ classes: wide
 toc: false
 ---
 
-We provide details on our corpus selection and task descripts for the TREC RAG 2024 track.
+We provide details on our corpus selection and task description for the TREC RAG 2024 track.
 
 ## TREC RAG Corpus Description
 We are happy to introduce the MS MARCO v2.1 document and segment collection for this year's TREC-RAG challenge!
