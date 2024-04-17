@@ -2,10 +2,12 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Categories"
-    url: /
+  - title: "Recent"
+    url: /recent/
   - title: "Tags"
     url: /tags/
+  - title: "About"
+    url: /
     #- title: "Sitemap"
     #  url: /sitemap/
 
