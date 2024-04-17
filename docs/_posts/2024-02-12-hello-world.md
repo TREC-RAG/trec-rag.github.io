@@ -1,5 +1,5 @@
 ---
-title: "TREC 2024 RAG - Hello World!"
+title: "TREC RAG 2024 - Hello World!"
 date: 2024-02-12T08:00:00-00:00
 categories:
   - Annoucements
