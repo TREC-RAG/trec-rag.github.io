@@ -3,11 +3,9 @@ main:
   - title: "About"
     url: /about/
   - title: "Categories"
-    url: /categories/
+    url: /
   - title: "Tags"
     url: /tags/
-  - title: "About"
-    url: /
     #- title: "Sitemap"
     #  url: /sitemap/
 
