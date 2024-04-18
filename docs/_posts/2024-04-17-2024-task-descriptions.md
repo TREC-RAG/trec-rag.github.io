@@ -5,7 +5,6 @@ categories:
   - Annoucements
 tags:
   - TREC 2024
-  - Corpus
   - Tasks
 classes: wide
 toc: false
