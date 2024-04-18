@@ -1,5 +1,5 @@
 ---
-title: "TREC RAG 2024 Corpus Finalization"
+title: "TREC RAG 2024 Corpus Finalization (Draft)"
 date: 2024-04-18T08:00:00-00:00
 categories:
   - Annoucements
@@ -68,10 +68,12 @@ Below is an example of a document from the MS MARCO V2.1 document corpus:
 }
 ```
 
-### More specifics on MS MARCO V2 document deduplication
-To avoid issues stemming from duplicate documents in the MS MARCO V2 document corpus, we adopted deduplication. First, involved a selection of duplicates and an establishment of equivalence classes of documents, run by Ian Soboroff from NIST following an LSH with minhash and 9-gram shingles. Our deduplication process involved selecting a representative `DocID` for each equivalence class. Utilizing these DocIDs, we refined our MS MARCO V2 Document collection—both its original and segmented versions—to generate two new collections and subsequently indexes. The resultant stats are summarized below:
+## More specifics on MS MARCO V2 document deduplication
+To avoid issues stemming from duplicate documents plaguing the MS MARCO V2 document corpus, we adopted deduplication. First, involved a selection of duplicates and an establishment of equivalence classes of documents, run by Ian Soboroff from NIST following an LSH with minhash and 9-gram shingles. Our deduplication process involved selecting a representative `DocID` for each equivalence class. Utilizing these DocIDs, we refined our MS MARCO V2 Document collection—both its original and segmented versions—to generate two new collections and subsequently indexes. The resultant stats are summarized below:
 
-| Collection |  Version 2.0 (Original) | Deduped 2.1 (Ours) |
+| Collection |  Version 2.0 (Original) | Version 2.1 (Ours) |
 | :--------: | :---------------------: | :----------------: |
 | MS MARCO Document | 11,959,635 | 10,960,555 |
 | MS MARCO Segment | 124,131,414 | 113,520,750 |
+
+We additionally 

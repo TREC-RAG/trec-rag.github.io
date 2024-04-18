@@ -1,5 +1,5 @@
 ---
-title: "TREC RAG 2024 Corpus & Task Description"
+title: "TREC RAG 2024 Task Description (Draft)"
 date: 2024-04-17T08:00:00-00:00
 categories:
   - Annoucements
