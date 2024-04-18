@@ -1,6 +1,6 @@
 ---
 title: "TREC RAG 2024 Task Description (Draft)"
-date: 2024-04-17T08:00:00-00:00
+date: 2024-04-18T09:00:00-00:00
 categories:
   - Annoucements
 tags:
@@ -13,13 +13,13 @@ toc: false
 
 We provide details on each task which will be conducted in the first year of the TREC RAG Track.
 
-## TASK 1: Retrieval Track (R)
+# TASK 1: Retrieval Track (R)
 
 - **Given**: Participants will be provided a list of topics and the complete MSMARCO V2.1 segment collection.
 - **Task**: Provide back the run file containing the top relevant segments from the MSMARCO V2.1 segment collection for each individual topic. 
 - **Notes**: The “R” track emulates the previous TREC-DL 2022/2023 tracks is for the IR audience, however, the main difference lies in using document segments from the MSMARCO V2.1 segment collection instead of the MSMARCO v2.0 passage collection.
 
-### Inputs to user
+## Inputs to user
 
 1. List of queries as topics as TSV: <`trec_rag_queries.tsv`>
 
@@ -58,7 +58,7 @@ We provide details on each task which will be conducted in the first year of the
 ...
 ```
 
-### Output from user
+## Output from user
 Output in TREC format containing top-k=`100` MSMARCOv2 segments as TSV: <`r_output_trec_rag_2024.tsv`>:
 
 ```bash
@@ -73,13 +73,13 @@ Output in TREC format containing top-k=`100` MSMARCOv2 segments as TSV: <`r_outp
 ...
 ```
 
-## TASK 2: Augmented Generation Track (AG)
+# TASK 2: Augmented Generation Track (AG)
 
 - **Given**: Participants will be provided a list of topics and top-k relevant retrieved segments mapped with the complete MSMARCO V2.1 segment collection.
 - **Task**: Return the summarized answer ground based on the information available in the pre-determined list of top-k segments provided to the participant. 
 - **Notes**: The AG track is for the NLP audience, focused on the generation output and quality. We provide the top-k retrieved segments, which allows the participants to focus on the RAG generation quality, by grounding on the set of chunks of segments, and generate an informative RAG summarized answer.
 
-### Inputs to user
+## Inputs to user
 1. List of queries as topics as TSV: <`trec_rag_queries.tsv`>
 
 ```bash
@@ -144,7 +144,7 @@ Output in TREC format containing top-k=`100` MSMARCOv2 segments as TSV: <`r_outp
 ...
 ```
 
-### Output from user
+## Output from user
 Output containing the following JSON information as <`ag_output_trec_rag_2024.jsonl`>:
 
 ```python
@@ -171,13 +171,13 @@ Output containing the following JSON information as <`ag_output_trec_rag_2024.js
 }
 ```
 
-## TASK 3: Retrieval-Augmented Generation Track (RAG)
+# TASK 3: Retrieval-Augmented Generation Track (RAG)
 
 - **Given**: Participants will be provided a list of topics and the complete MSMARCO v2 document/segment collection. 
 - **Task**: Return the summarized answer and ground based on information which you can either the MSMARCOv2 document or segment collection. Develop your own retrieval system to fetch relevant information from the MSMARCOv2 segment/document collection. You can use either our pre-determined segment collection or incorporate your own **chunking** technique with the MSMARCOv2 document collection.
 - **Notes**: The RAG track is a mixture of above (R) and (AG) tracks. This setup mimics best the industrial RAG setup for the NLP+IR audience. We evaluate the summarized answer in multiple ways incorporating both grounding and evaluating fluency of the generated output.
 
-### Inputs to user
+## Inputs to user
 
 1. List of queries as topics as TSV: <`trec_rag_queries.tsv`>
 
@@ -218,7 +218,7 @@ Output containing the following JSON information as <`ag_output_trec_rag_2024.js
 ```
 
 
-### Output from user
+## Output from user
 Output containing the following JSON information as <`rag_output_trec_rag_2024.jsonl`>. You can feel free to use any document/segmentation choice of yours, however, to make this collection reusable, we require the participant to map their custom chunked segments with segments available from MSMARCO V2.1 segment collection and provide us back the JSON output shown below:
 
 ```python
@@ -245,7 +245,7 @@ Output containing the following JSON information as <`rag_output_trec_rag_2024.j
 }
 ```
 
-We now pass this on to the community for feedback. Please feel free to reach out to us via email/Twitter/Discord!
+We now pass this on to the community for feedback. Please feel free to reach out to us via Twitter/Discord!
 
 Live Long and Prosper,
 TREC RAG Organizers
