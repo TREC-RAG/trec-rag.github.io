@@ -13,7 +13,7 @@ toc: false
 We are happy to introduce the MS MARCO V2.1 document corpus and its *segmented version* for this year's TREC RAG Track!
 
 ## MS MARCO V2.1 Document Corpus
-The MS MARCO V2.1 document corpus has been cleaned following some deduping from the MS MARCO V2 document corpus. Our initial plan was to utilize the MS MARCO V2 passage corpus. However, Community feedback ([Twitter post](https://twitter.com/TREC_RAG/status/1772324651659636781)) and discussions with Jeff Dalton influenced us to reconsider our option. A notable concern with the original corpus (MS MARCO V2) was the presence of duplicate passages, making evaluation harder. Additionally, with passages, important considerations like length, chunking, etc. are not explored while they could be important to both researchers and practitioners. Note that for the filtered corpus, we applied an additional `body = body.strip()` step to allow for *precise* `start_char` and `end_char` calculation such that we could match the segments from the MS MARCO V2 corpus exactly (these fields are missing in the V2 corpus). The other fields have not been changed from the MS MARCO V2 document corpus except the document identifier which we modified to keep the original meaning (JSONL file and start position byte offset, more on this later). The new corpus has 10,960,555 documents compared to the original which had 11,959,635 documents. 
+The MS MARCO V2.1 document corpus has been cleaned following some deduping from the MS MARCO V2 document corpus. Our initial plan was to utilize the MS MARCO V2 passage corpus. However, Community feedback ([Twitter post](https://twitter.com/TREC_RAG/status/1772324651659636781)) and discussions with Jeff Dalton influenced us to reconsider our option. A notable concern with the original corpus (MS MARCO V2) was the presence of duplicate passages, making evaluation harder (more holes, inconsistencies, etc.). Additionally, with passages, important considerations like length, chunking, etc. are not explored while they could be important to both researchers and practitioners. Note that for the filtered corpus, we applied an additional `body = body.strip()` step to allow for *precise* `start_char` and `end_char` calculation such that we could match the segments from the MS MARCO V2 corpus exactly (these fields are missing in the V2 corpus). The other fields have not been changed from the MS MARCO V2 document corpus except the document identifier which we modified to keep the original meaning (JSONL file and start position byte offset, more on this later). The new corpus has 10,960,555 documents compared to the original which had 11,959,635 documents. 
 
 ### Document Format
 Each MS MARCO V2.1 document has five fields: 
@@ -71,17 +71,17 @@ Below is an example of a segment from the segmented MS MARCO V2.1 document corpu
 Consider the segment above, the `docid` `msmarco_v2.1_doc_29_677149#3_1637632` encodes the filename and starting position of the corresponding document's jsonl line, the segment number of the document (0-indexed), and the starting position of the segment's jsonl line (filename is the same as that of the document). So `_29` and `_677149` indicate the corresponding document is in the file `msmarco_v2_doc/msmarco_doc_29` at *byte* offset 677149. The `#3_1637632` indicates the segment is the 4th segment for the document ``msmarco_v2.1_doc_29_677149` and you can find the segment in the file `msmarco_v2_doc_segmented/msmarco_doc_segmented_29` at *byte* offset 1637632.
 
 ## Deduplication Specifics
-To avoid issues stemming from duplicate documents plaguing the MS MARCO V2 document corpus, we adopted deduplication. The initial step involved a selection of duplicates and an establishment of equivalence classes of documents, run by Ian Soboroff from NIST, and used an LSH with minhash and 9-gram shingles. Our deduplication process involved selecting a representative `DocID` for each equivalence class. Utilizing these DocIDs, we refined our MS MARCO V2 Document collection—both its original and segmented versions—to generate two new collections and subsequently indexes. The resultant stats are summarized below:
+To avoid issues stemming from duplicate documents plaguing the MS MARCO V2 document corpus, we adopted deduplication. The initial step involved a selection of duplicates and an establishment of equivalence classes of documents, run by Ian Soboroff from NIST, and used an LSH with minhash and 9-gram shingles. Our deduplication process involved selecting a representative `DocID` for each equivalence class. Utilizing these DocIDs, we refined our MS MARCO V2 Document collection—both its original and segmented versions—to generate two new corpora. The resultant stats are summarized below:
 
 | Collection | Version 2.0 (Original) | Version 2.1 (Ours) |
 | :--------: | :---------------------: | :----------------: |
 | MS MARCO Document | 11,959,635 | 10,960,555 |
-| MS MARCO Segment | 124,131,414 | 113,520,750 |
+| MS MARCO Segmented | 124,131,414 | 113,520,750 |
 
 
 ## Modified relevance judgments for TREC DL 2021-2023 and Dev/Dev2 sets
 
-We additionally map the relevance judgments from the TREC DL 2021-2023 and Dev/Dev2 sets to the MS MARCO V2.1 document corpus. 
+We additionally map the relevance judgments from the TREC DL 2021-2023 and Dev/Dev2 sets from the original collection to the MS MARCO V2.1 document corpus. This will allow the community to better leverage the MS MARCO V2.1 document collection to test their retrieval and ranking models.
 
 ## Next Steps
 The corpus along with the updated qrels will be made available to the community soon. We have already implemented [Anserini]()/Pyserini retrieval baselines for these sets and are in the process of packaging things! Additionally, we hope to provide reranking baselines with state-of-the-art RankZephyr, RankGPT, and Cohere Rerank 3 models through [RankLLM](rankllm.ai).
