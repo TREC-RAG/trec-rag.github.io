@@ -83,10 +83,11 @@ To avoid issues stemming from duplicate documents plaguing the MS MARCO V2 docum
 
 We additionally map the relevance judgments from the TREC DL 2021-2023 and Dev/Dev2 sets to the MS MARCO V2.1 document corpus. 
 
-The corpus along with the updated qrels will be made available to the community soon. We have already implemented Anserini/Pyserini retrieval baselines for these sets and are packing things up! Additionally, we hope to provide reranking baselines with state-of-the-art RankZephyr, RankGPT, and Cohere Rerank 3 models.
+## Next Steps
+The corpus along with the updated qrels will be made available to the community soon. We have already implemented [Anserini]()/Pyserini retrieval baselines for these sets and are in the process of packaging things! Additionally, we hope to provide reranking baselines with state-of-the-art RankZephyr, RankGPT, and Cohere Rerank 3 models through [RankLLM](rankllm.ai).
 
 More information on the topics for the TREC RAG 2024 Track will be released soon. Stay tuned!
 
-So long and thanks for all the fish,
+So long and thanks for all the fish 🐟,
 
 TREC RAG Organizers
