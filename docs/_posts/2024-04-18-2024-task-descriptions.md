@@ -173,7 +173,8 @@ Output containing the following JSON information as <`ag_output_trec_rag_2024.js
         "response_length": 1090, 
         "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The frequency with which you should take your toddler to the potty depends on their readiness for potty training.", "citations": [0, 1, 12, 13, 19]}, 
-            {"text": "Some sources suggest that toddlers should be taken to the potty about three times a day: first thing in the morning, after mealtimes, and again before bedtime.", "citations": [0, 4, 6, 8]}, {"text": "It is recommended that you watch for facial expressions or poses that may signal that they need to \"go\".", "citations": [6, 8]}, 
+            {"text": "Some sources suggest that toddlers should be taken to the potty about three times a day: first thing in the morning, after mealtimes, and again before bedtime.", "citations": [0, 4, 6, 8]}, 
+            {"text": "It is recommended that you watch for facial expressions or poses that may signal that they need to \"go\".", "citations": [6, 8]}, 
             {"text": "If they are reluctant to use the potty, don't force them.", "citations": [6, 8]}, 
             {"text": "Other sources suggest that toddlers should be taken to the potty every two hours, whether they have to go or not.", "citations": [14, 15]}, 
             {"text": "This includes first thing in the morning, before leaving the house, and before naps and bedtime.", "citations": [14, 15]}, 
@@ -258,7 +259,8 @@ Output containing the following JSON information as <`rag_output_trec_rag_2024.j
         "response_length": 1090, 
         "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The frequency with which you should take your toddler to the potty depends on their readiness for potty training.", "citations": [0, 1, 12, 13, 19]}, 
-            {"text": "Some sources suggest that toddlers should be taken to the potty about three times a day: first thing in the morning, after mealtimes, and again before bedtime.", "citations": [0, 4, 6, 8]}, {"text": "It is recommended that you watch for facial expressions or poses that may signal that they need to \"go\".", "citations": [6, 8]}, 
+            {"text": "Some sources suggest that toddlers should be taken to the potty about three times a day: first thing in the morning, after mealtimes, and again before bedtime.", "citations": [0, 4, 6, 8]}, 
+            {"text": "It is recommended that you watch for facial expressions or poses that may signal that they need to \"go\".", "citations": [6, 8]}, 
             {"text": "If they are reluctant to use the potty, don't force them.", "citations": [6, 8]}, 
             {"text": "Other sources suggest that toddlers should be taken to the potty every two hours, whether they have to go or not.", "citations": [14, 15]}, 
             {"text": "This includes first thing in the morning, before leaving the house, and before naps and bedtime.", "citations": [14, 15]}, 
@@ -274,7 +276,7 @@ Output containing the following JSON information as <`rag_output_trec_rag_2024.j
 
 We will now build baselines for the tasks and finalize topics as the next step!
 
-Our task information is at a draft stage, hence we encourage the community to provide us with constructive feedback regarding any task or if need further clarification.
+Our task information is at a draft stage, hence we encourage the community to provide us with constructive feedback regarding any task, or require us to further clarify any task.
 Please feel free to reach out to us via Twitter/Discord!
 
 
