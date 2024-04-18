@@ -11,89 +11,13 @@ classes: wide
 toc: false
 ---
 
-We provide details on our corpus selection and task description for the TREC RAG 2024 track.
-
-## TREC RAG Corpus Description
-We are happy to introduce the MS MARCO v2.1 document and segment collection for this year's TREC-RAG challenge!
-
-### Introduction
-The MS MARCO v2.1 document and segment collection has been cleaned and deduped from the MSMARCOv2 document collection. Our initial plan was to utilize the MS MARCO v2 Passage Collection. However, community feedback ([Twitter post](https://twitter.com/TREC_RAG/status/1772324651659636781)) led us to reconsider our option and select the MS MARCO v2 Document collection. A notable concern with this passage collection was the presence of duplicate passages.
-
-### MS MARCO v2.1 Segment
-We implement a sliding window-based filtering to segment each MSMARCO v2.1 document into chunks of segments of text containing anywhere between 500-1000 characters. The MS MARCO v2.1 segment collection would be used in the TREC-RAG 2024 task. The MS MARCO v2.1 segment collection after deduplication contains 113,520,750 segments in total. 
-
-> The MS MARCO segment id `msmarco_v2.1_doc_29_677149#3_1637632`contains the mapping information from which document (`msmarco_v2.1_doc_29_677149`) it has been segmented. The suffix `#3` denotes the 3rd segment of the document, and `_1637632` denotes the *byte* offset of the position of the segment in the collection. 
-
-Each MS MARCO v2.1 segment has seven keys: 
- - `docid` which contains the unique segment identifier
- - `url` of the segment from MS MARCO v2.1 document
- - `title` which denotes the title of the MS MARCO v2.1 document
- - `headings` which contains each subheadings of the MS MARCO v2.1 document
- - `segment`contains the chunked text
- - `start_char` contains the start position character of the segment in MS MARCO v2.1 document
- - `end_char` contains the end position character of the segment in MS MARCO v2.1 document
-
-Below is an example of a segment from the MS MARCO v2.1 segment collection:
-
-```python
-{
-    'docid': 'msmarco_v2.1_doc_29_677149#3_1637632', 
-    'url': 'https://studyelectrical.com/2019/07/aeolian-vibration-of-transmission-conductors.html', 
-    'title': 'Aeolian Vibration of Transmission Conductors', 
-    'headings': 'Aeolian Vibration of Transmission Conductors\nAeolian Vibration of Transmission Conductors\nWhat is Aeolian Vibration?\nWind causes a variety of motions on transmission line conductors. Important among them are\nHow Aeolian Vibration Occurs?\nTheory/Mechanism of Aeolian Vibration\nFactors Affecting Aeolian Vibration\nEffects of Aeolian Vibration\nAeolian Vibration Damping Devices\n', 
-    'segment': 'These motions are generally characterized as low frequency and high amplitude. If these motions are not controlled, they can produce damage to the conductor and other elements in the transmission     system. Aeolian vibration, on the other hand, is associated with smooth non-turbulent winds in the range of 2 MPH (miles per hour) to 15 MPH and can occur on a daily basis. Aeolian vibration is characterized by high frequency and low amplitude motion. This article describes the theory and mechanism of aeolian vibration, effects of aeolian vibration and different dampers used to reduce the harmfull effect of aeolian vibration. How Aeolian Vibration Occurs? Aeolian vibrations occur when a smooth wind flow of 2 to 15 mph (1 to 7 m/s) interacts a conductor. When this happens, air accelerates to go around the conductor and then separates behind it as seen in Figure below. Vortex formation and Aeolian Vibration occurring in a Transmission Line\nThis motion creates a low-pressure region at the opposite side of the conductor and the air shows a tendency to move\ninto this vacuum zone. This is the vortex shedding action that creates an alternating pressure imbalance causing the conductor to move up and down at a ninety-degree angle to the flow direction.', 
-    'start_char': 1806, 
-    'end_char': 3061
-},
-```
-
-### MS MARCO v2.1 Document
-The MS MARCO v2.1 document collection after deduplication contains 10,960,555 (~10.96 million) documents. The metadata has not been changed from the original MS MARCO v2 document collection just with the exception of the document id which we have uniquely defined for each document.
-
-> The MS MARCO document id `msmarco_v2.1_doc_29_677149`contains the document information and `_29` and `_677149` denotes the *byte* offset of the position of the document in the collection. 
-
-Each MS MARCO v2.1 document has five keys: 
- - `docid` which contains the unique document identifier
- - `url` of the MS MARCO v2.1 document
- - `title` which denotes the title of the MS MARCO v2.1 document
- - `headings` which contains each subheadings of the MS MARCO v2.1 document
- - `body`contains the body text of the MS MARCO v2.1 document
-
-
-Below is an example of a document from the MS MARCO v2.1 document collection:
-
-```python
-{
-    'docid': 'msmarco_v2.1_doc_29_677149',
-    'url': 'https://studyelectrical.com/2019/07/aeolian-vibration-of-transmission-conductors.html', 
-    'title': 'Aeolian Vibration of Transmission Conductors', 
-    'headings': 'Aeolian Vibration of Transmission Conductors\nAeolian Vibration of Transmission Conductors\nWhat is Aeolian Vibration?\nWind causes a variety of motions on transmission line conductors. Important among them are\nHow Aeolian Vibration Occurs?\nTheory/Mechanism of Aeolian Vibration\nFactors Affecting Aeolian Vibration\nEffects of Aeolian Vibration\nAeolian Vibration Damping Devices\n', 
-    'body': "Aeolian Vibration of Transmission Conductors\nAeolian Vibration of Transmission Conductors\nCategories Uncategorized\nTable of Contents\nWhat is Aeolian Vibration?\nHow Aeolian Vibration Occurs?\nTheory/Mechanism of Aeolian Vibration\nFactors Affecting Aeolian Vibration\nEffects of Aeolian Vibration [...] These motions are generally characterized as low frequency and high amplitude. If these motions are not controlled, they can produce damage to the conductor and other elements in the transmission system.\nAeolian vibration, on the other hand, is associated with smooth non-turbulent winds in the range of 2 MPH (miles per hour) to 15 MPH and can occur on a daily basis. Aeolian vibration is characterized by high frequency and low amplitude motion.\nThis article describes the theory and mechanism of aeolian vibration, effects of aeolian vibration and different dampers used to reduce the harmfull effect of aeolian vibration.\nHow Aeolian Vibration Occurs?\nAeolian vibrations occur when a smooth wind flow of 2 to 15 mph (1 to 7 m/s) interacts a conductor.\nWhen this happens, air accelerates to go around the conductor and then separates behind it as seen in Figure below.\nVortex formation and Aeolian Vibration occurring in a Transmission Line\nThis motion creates a low-pressure region at the opposite side of the conductor and the air shows a tendency to move\ninto this vacuum zone. This is the vortex shedding action that creates an alternating pressure imbalance causing the conductor to move up and down at a ninety-degree angle to the flow direction. [...] Spring-piston dampers, pneumatic dampers, and Stockbridge dampers are classified as the tuned dampers which are effective when their natural frequency coincide with the excitation frequency of the conductor.\nUnlike the spring-piston dampers and the pneumatic dampers, the Stockbridge dampers can be tuned to be effective over a wide range of frequency and they can dissipate vibrations in any directions.\nTesla is an Electrical Engineer, Physicist and an Inventor in making. He is a good writer and author of many courses and articles published in this site."
-}
-```
-
-### MS MARCO v2 document deduplication
-To avoid the duplicate document issue in MSMARCOv2 document collection, we adopted a deduplication strategy involving a LSH + minhash algorithm. Our deduplication process involved selecting a representative `docID` for each equivalence class. Utilizing these DocIDs, we refined our MS MARCO v2 Document collection—both its original and segmented versions—to generate two new collections and subsequently indexes. The effect on the index size was significant:
-
-| Collection |  Version 2.0 (Original) | Deduped 2.1 (Ours) |
-| :--------: | :---------------------: | :----------------: |
-| MS MARCO Document | 11,959,635 | 10,960,555 |
-| MS MARCO Segment | 124,131,414 | 113,520,750 |
-
-# TREC-RAG Task Description
-
-We are conducting three tasks in TREC-RAG 2024 competition. These are named as follows:
-- [1] **(R)** Retrieval Track
-- [2] **(AG)** Augmented Generation Track
-- [3] **(RAG)** Retrieval-Augmented Generation Track
-
-Below we provide details on each task which will be conducted in the first version of the TREC-RAG 2024.
+We provide details on each task which will be conducted in the first year of the TREC RAG Track.
 
 ## TASK 1: Retrieval Track (R)
 
-- **Given**: Participants will be provided a list of topics and the complete MSMARCO v2.1 segment collection.
-- **Task**: Provide back the run file containing the top relevant segments from the MSMARCO v2.1 segment collection for each individual topic. 
-- **Notes**: The “R” track emulates the previous TREC-DL 2022/2023 tracks is for the IR audience, however, the main difference lies in using document segments from the MSMARCO v2.1 segment collection instead of the MSMARCO v2.0 passage collection.
+- **Given**: Participants will be provided a list of topics and the complete MSMARCO V2.1 segment collection.
+- **Task**: Provide back the run file containing the top relevant segments from the MSMARCO V2.1 segment collection for each individual topic. 
+- **Notes**: The “R” track emulates the previous TREC-DL 2022/2023 tracks is for the IR audience, however, the main difference lies in using document segments from the MSMARCO V2.1 segment collection instead of the MSMARCO v2.0 passage collection.
 
 ### Inputs to user
 
@@ -151,7 +75,7 @@ Output in TREC format containing top-k=`100` MSMARCOv2 segments as TSV: <`r_outp
 
 ## TASK 2: Augmented Generation Track (AG)
 
-- **Given**: Participants will be provided a list of topics and top-k relevant retrieved segments mapped with the complete MSMARCO v2.1 segment collection.
+- **Given**: Participants will be provided a list of topics and top-k relevant retrieved segments mapped with the complete MSMARCO V2.1 segment collection.
 - **Task**: Return the summarized answer ground based on the information available in the pre-determined list of top-k segments provided to the participant. 
 - **Notes**: The AG track is for the NLP audience, focused on the generation output and quality. We provide the top-k retrieved segments, which allows the participants to focus on the RAG generation quality, by grounding on the set of chunks of segments, and generate an informative RAG summarized answer.
 
@@ -295,7 +219,7 @@ Output containing the following JSON information as <`ag_output_trec_rag_2024.js
 
 
 ### Output from user
-Output containing the following JSON information as <`rag_output_trec_rag_2024.jsonl`>. You can feel free to use any document/segmentation choice of yours, however, to make this collection reusable, we require the participant to map their custom chunked segments with segments available from MSMARCO v2.1 segment collection and provide us back the JSON output shown below:
+Output containing the following JSON information as <`rag_output_trec_rag_2024.jsonl`>. You can feel free to use any document/segmentation choice of yours, however, to make this collection reusable, we require the participant to map their custom chunked segments with segments available from MSMARCO V2.1 segment collection and provide us back the JSON output shown below:
 
 ```python
 {
