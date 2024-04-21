@@ -85,7 +85,7 @@ We additionally map the relevance judgments from the TREC DL 2021-2023 and Dev/D
 
 ## Where can I find the corpus?
 
-The MS MARCO V2.1 document corpus and its segmented version is available to download courtesy of Microsoft! You can find the details below:
+The MS MARCO V2.1 document corpus and its segmented version are available to download courtesy of Microsoft! You can find the details below:
 
 | Collection | Filename | File size | Num Records | Format | MD5 Checksum |
 | :----------------: | :---------------------: | :----------------: | :----------------: | :----------------: | :----------------: |
