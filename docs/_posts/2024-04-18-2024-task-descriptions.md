@@ -1,5 +1,5 @@
 ---
-title: "TREC RAG 2024 Task Description (Draft)"
+title: "TREC 2024 RAG Task Description (Draft)"
 date: 2024-04-18T09:00:00-00:00
 categories:
   - Annoucements
@@ -10,7 +10,7 @@ classes: wide
 toc: false
 ---
 
-We are excited to provide details on each task which will be conducted in the first year of the TREC RAG 2024! 🎉🎉
+We are excited to provide details on each task which will be conducted in the first year of the TREC RAG! 🎉🎉
 
 # TASK 1: Retrieval Track (R)
 

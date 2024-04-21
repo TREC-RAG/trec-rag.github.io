@@ -9,7 +9,7 @@ The [(TREC)](https://trec.nist.gov/) **R**etrieval-**A**ugmented **G**eneration 
 
 ## 2024 Tasks Overview
 
-We are conducting three tasks in TREC-RAG 2024 track. These tasks are as follows:
+We are conducting three tasks in TREC 2024 RAG track. These tasks are as follows:
 
 1. **(R) Retrieval Task** : The “R” track requires participants to rank and retrieve the topmost relevant segments from the MS MARCO Segment v2.1 collection for the provided set of input topics, i.e., queries.
 
@@ -20,7 +20,7 @@ We are conducting three tasks in TREC-RAG 2024 track. These tasks are as follows
 
 ## Proposed Evaluation Methodology - Version 0.1
 
-The proposed evaluation methodology for the TREC RAG 2024 track is as follows:
+The proposed evaluation methodology for the TREC 2024 RAG track is as follows:
 
 ![Gather Answers](/assets/images/eval-step1.png){: .align-center}
 <figcaption>Given a set of queries, the participants will be asked to generate a set of answers. The answers can be generated using any method, including but not limited to retrieval, generation, or a combination of both. </figcaption>
@@ -45,7 +45,7 @@ The proposed evaluation methodology for the TREC RAG 2024 track is as follows:
 
 Runs should be due around the end of July. More granular timeline will be released soon.
 
-## Organizers of TREC RAG 2024
+## Organizers of TREC 2024 RAG Track
 
 - Ronak Pradeep, University of Waterloo
 - Nandan Thakur, University of Waterloo
