@@ -75,16 +75,48 @@ To avoid issues stemming from duplicate documents plaguing the MS MARCO V2 docum
 
 | Collection | Version 2.0 (Original) | Version 2.1 (Ours) |
 | :--------: | :---------------------: | :----------------: |
-| MS MARCO Document | 11,959,635 | 10,960,555 |
-| MS MARCO Segmented | 124,131,414 | 113,520,750 |
+| MS MARCO Document Corpus | 11,959,635 | 10,960,555 |
+| MS MARCO Document Corpus - Segmented | 124,131,414 | 113,520,750 |
 
 
 ## Modified relevance judgments for TREC DL 2021-2023 and Dev/Dev2 sets
 
 We additionally map the relevance judgments from the TREC DL 2021-2023 and Dev/Dev2 sets from the original collection to the MS MARCO V2.1 document corpus. This will allow the community to better leverage the MS MARCO V2.1 document collection to test their retrieval and ranking models.
 
+## Where can I find the corpus?
+
+The MS MARCO V2.1 document corpus and its segmented version is available to download courtesy of Microsoft! You can find the details below:
+
+| Collection | Filename | File size | Num Records | Format | MD5 Checksum |
+| :----------------: | :---------------------: | :----------------: | :----------------: | :----------------: | :----------------: |
+| MS MARCO V2.1 Document Corpus | [msmarco_v2.1_doc.tar](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2.1_doc.tar) | 28.1 GB | 10,960,555 | tar of 70 gzipped jsonl files | `a5950665d6448d3dbaf7135645f1e074` |
+| MS MARCO V2.1 Document Corpus - Segmented | [msmarco_v2.1_doc_segmented.tar](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2.1_doc_segmented.tar) | 25.1 GB | 113,520,750 | tar of 70 gzipped jsonl files | `3799e7611efffd8daeb257e9ccca4d60` |
+
+## And the updated qrels?
+
+The updated qrels for the TREC DL 2021-2023 and Dev/Dev2 sets are available to download via Anserini! You can find the details below:
+
+| Set | Filename | Num Records | Format | MD5 Checksum |
+| :--------: | :---------------------: | :----------------: | :----------------: | :----------------: |
+| TREC DL 2021 | [qrels.dl21-doc-msmarco-v2.1.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/qrels.dl21-doc-msmarco-v2.1.txt) | 10,973 | TREC qrels format | `6845b6c128aec71027e72078a960600e` |
+| TREC DL 2022 | [qrels.dl22-doc-msmarco-v2.1.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/qrels.dl22-doc-msmarco-v2.1.txt) | 349,541 | TREC qrels format | `ac9f5c6fcb6972d8bf13b07ab150680a` |
+| TREC DL 2023 | [qrels.dl23-doc-msmarco-v2.1.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/qrels.dl23-doc-msmarco-v2.1.txt) | 15,995 | TREC qrels format | `4b30e8850b6fba56289b6c177afe959b` |
+| MS MARCO Dev | [qrels.msmarco-v2.1-doc.dev.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/qrels.msmarco-v2.1-doc.dev.txt) | 4,702 | TREC qrels format | `089b19dce0a6f74d3f01fd988d439f2f` |
+| MS MARCO Dev2 | [qrels.msmarco-v2.1-doc.dev2.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/qrels.msmarco-v2.1-doc.dev2.txt) | 5,177 | TREC qrels format | `8ff337f2110ea44ba8c5533a7eff6222` |
+
+Topics corresponding to the TREC DL 2021-2023 and Dev/Dev2 sets are the same as the original sets, but for convenience you can also find them here:
+
+
+| Set | Filename | Num Records | Format | MD5 Checksum |
+| :--------: | :---------------------: | :----------------: | :----------------: | :----------------: |
+| TREC DL 2021 | [topics.dl21.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/topics.dl21.txt) | 477 | TREC topics format | `46d863434dda18300f5af33ee29c4b28` |
+| TREC DL 2022 | [topics.dl22.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/topics.dl22.txt) | 500 | TREC topics format | `f1bfd53d80e81e58207ce557fd2211a0` |
+| TREC DL 2023 | [topics.dl23.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/topics.dl23.txt) | 700 | TREC topics format | `7df9e17b47cc9aa5d1c9fd5b313e273c` |
+| MS MARCO Dev | [topics.msmarco-v2-doc.dev.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/topics.msmarco-v2-doc.dev.txt) | 4,552 | TREC topics format | `b05dc19f1d2b8ad729f189328a685aa1` |
+| MS MARCO Dev2 | [topics.msmarco-v2-doc.dev2.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/topics.msmarco-v2-doc.dev2.txt) | 5,000 | TREC topics format | `f000319f1893a7acdd60fdcae0703b95` |
+
 ## Next Steps
-The corpus along with the updated qrels will be made available to the community soon. We have already implemented [Anserini]()/Pyserini retrieval baselines for these sets and are in the process of packaging things! Additionally, we hope to provide reranking baselines with state-of-the-art RankZephyr, RankGPT, and Cohere Rerank 3 models through [RankLLM](rankllm.ai).
+We have already implemented [Anserini]()/Pyserini retrieval baselines for these sets and are in the process of packaging things! Additionally, we hope to provide reranking baselines with state-of-the-art RankZephyr, RankGPT, and Cohere Rerank 3 models through [RankLLM](rankllm.ai).
 
 More information on the topics for the TREC RAG 2024 Track will be released soon. Stay tuned!
 
