@@ -116,7 +116,7 @@ Topics corresponding to the TREC DL 2021-2023 and Dev/Dev2 sets are the same as 
 | MS MARCO Dev2 | [topics.msmarco-v2-doc.dev2.txt](https://raw.githubusercontent.com/castorini/anserini-tools/master/topics-and-qrels/topics.msmarco-v2-doc.dev2.txt) | 5,000 | TREC topics format | `f000319f1893a7acdd60fdcae0703b95` |
 
 ## Next Steps
-We have already implemented [Anserini]()/Pyserini retrieval baselines for these sets and are in the process of packaging things! Additionally, we hope to provide reranking baselines with state-of-the-art RankZephyr, RankGPT, and Cohere Rerank 3 models through [RankLLM](rankllm.ai).
+We have already implemented [Anserini](https://github.com/castorini/anserini)/[Pyserini](https://github.com/castorini/pyserini) retrieval baselines for these sets and are in the process of packaging things! Additionally, we hope to provide reranking baselines with state-of-the-art RankZephyr, RankGPT, and Cohere Rerank 3 models through [RankLLM](rankllm.ai).
 
 More information on the topics for the TREC 2024 RAG Track will be released soon. Stay tuned!
 
