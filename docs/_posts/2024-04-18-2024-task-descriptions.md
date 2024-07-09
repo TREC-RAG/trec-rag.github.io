@@ -12,33 +12,29 @@ classes: wide
 toc: false
 ---
 
-# TREC 2024 RAG Guidelines
-
 > Version 1.0. Last Updated: July 9, 2024
 
-Participating teams will receive both the MS MARCO V2.1 document \& segment collection and a list of topic descriptions.
-For each topic, participants have the choice to participate in either all or any of three tasks introduced this RAG this year. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG \& RAG), participating systems would generate an answer description (containing upto a maximum of 300 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
+Participating teams will receive both the MS MARCO V2.1 document & segment collection and a list of topic descriptions.
+For each topic, participants have the choice to participate in either all or any of three tasks introduced this RAG this year. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description (containing upto a maximum of 300 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
 
-> Participate in our RAG Track by registering for TREC at this [website](https://trec.nist.gov/pubs/call2024.html).
-
-> Test topics will be released by August 4, 2024 \& Submit your participating runs by August 11, 2024!
+> Participate in our RAG Track by registering for TREC at this [website](https://trec.nist.gov/pubs/call2024.html). Test topics will be released by August 4, 2024 & Submit your participating runs by August 11, 2024!
 
 ## Task Overview
 
-We are excited to provide details on each task which will be conducted in the first year of the TREC RAG track! 🎉🎉
+We are excited to provide details on each task which will be conducted in the first year of the TREC RAG track! You can participate in any or all of the three tasks below:
 
 | TREC 2024 RAG Task  | Input | Output |
 | ------------------- | ----- | ------ |
 | [(R) Retrieval Task](#retrieval-task-r) | MS MARCO V2.1 Segment Collection + List of Topics | Ranked List of Segment IDs drawn from the collection |
 | [(AG) Augmented Generation Task](#augmented-generation-task-ag) | Ranked List of Segment IDs + List of Topics | RAG Answer with references from provided Segment IDs |
-| [(RAG) Retrieval-Augmented Generation Task](#retrieval-augmented-generation-task-rag) | MS MARCO V2.1 Segment \& Document Collection + List of Topics | RAG Answer with references from provided Segment IDs |
+| [(RAG) Retrieval-Augmented Generation Task](#retrieval-augmented-generation-task-rag) | MS MARCO V2.1 Segment & Document Collection + List of Topics | RAG Answer with references from provided Segment IDs |
 
 
-## Assessment \& Evaluation
-Evaluation of the participating systems will involve four metrics: *Nugget evaluation*, *Support evaluation*, *Fluency evaluation* \& *Retrieval evaluation*. All cited segments provided by the partcipants will be added to the relevance assessment pools for each individual topic. After the first round of LLM-generated relevance assessments with post-curation from NIST assessors, the LLM-generated nugget list for nugget evaluation with post-curation from NIST assessors. Finally, we assign scores based on nugget recall and precision and other factors involving LLM-assisted support evaluation (grouding based on referenced segments) and LLM-assisted fluency evaluation (grammar and coherence) of the RAG response with post-curation from NIST assessors. The detailed process for assessment will be outlined soon.
+## Assessment & Evaluation
+Evaluation of the participating systems will involve four metrics: *Nugget evaluation*, *Support evaluation*, *Fluency evaluation* & *Retrieval evaluation*. All cited segments provided by the partcipants will be added to the relevance assessment pools for each individual topic. After the first round of LLM-generated relevance assessments with post-curation from NIST assessors, the LLM-generated nugget list for nugget evaluation with post-curation from NIST assessors. Finally, we assign scores based on nugget recall and precision and other factors involving LLM-assisted support evaluation (grouding based on referenced segments) and LLM-assisted fluency evaluation (grammar and coherence) of the RAG response with post-curation from NIST assessors. The detailed process for assessment will be outlined soon.
 
 
-# Task Overview
+# Tasks Overview
 
 ## Retrieval Task (R)
 The retrieval task as the name suggets is an ad-hoc information retrieval task similar to the previous [TREC Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning.html). Participating systems will receive a list of topics and the MS MARCO V2.1 segment collection. For each topic, the system needs to return the TREC runfile containing the ranked list containing the top 20 relevant segment IDs from the collection. The topics provided will be non-factoid and require long-form answer generation.
@@ -60,7 +56,7 @@ List of queries as topics as TSV: <`trec_rag_2024_queries.tsv`>, with each line 
 
 ### Input Format (Segments)
 
-MS MARCO v2.1 segment collection as JSONL: <`msmarco_v2.1_doc_segmented_XX.json.gz`>, each document is present in the JSON format on each line. The fields present for each document are:
+MS MARCO v2.1 segment collection as JSONL: <`msmarco_v2.1_doc_segmented_XX.json.gz`>, each segment is present in the JSON format on each line. The fields present are:
 - docid (string): The segment ID for the MS MARCO v2.1 segment (Note: ID before "#" is the mapped document ID)
 - url (string): The url of the segment available on the webpage (same as the document)
 - title (string): The title of the segment or chunk (same as the document) 
@@ -133,7 +129,7 @@ Participants should provide their output in the standard TREC format containing 
 
 The Augmented Generation task emulates the modern-day RAG task to return the summarized answer ground based on the information available in the pre-determined list of top-k segments provided to the participant.  Participating systems will receive a list of topics, MS MARCO V2.1 segment collection and the ranked list of the top-k relevant segments for each individual topic. The topics provided will be non-factoid and require long-form answer generation.
 
-> The AG track is for the NLP audience, focused on the generation output and quality. We provide the top-k retrieved segments, which allows the participants to focus on the RAG generation quality, by grounding on the set of chunks of segments, and generate an informative RAG summarized answer.
+> The AG track is for the NLP audience, focused on the generation output and quality. We provide the top-k retrieved segments, which allows the participants to focus on the answer generation quality, by grounding on the set of chunks of segments, and generate an informative & summarized answer.
 
 ### Input Format (Topics)
 
