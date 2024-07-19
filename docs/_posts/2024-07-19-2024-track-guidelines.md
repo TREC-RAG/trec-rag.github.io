@@ -380,6 +380,8 @@ Output containing the following JSON information as <`rag_output_trec_rag_2024.j
 }
 ```
 
+You can find baseline end-to-end RAG systems for the development sets leveraging Anserini, RankLLM, and Ragnarök [here](https://github.com/castorini/ragnarok/blob/main/docs/rag24.md)!
+
 ## Next Steps
 
 We encourage participants to start encoding the MS MARCO V2.1 segment corpus (120+ million) using their favourite retrieval system.
