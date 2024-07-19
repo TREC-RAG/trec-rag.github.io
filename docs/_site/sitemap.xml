@@ -2,11 +2,23 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/annoucements/hello-world/</loc>
-<lastmod>2024-02-12T09:00:00+01:00</lastmod>
+<lastmod>2024-02-12T03:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/annoucements/corpus/</loc>
-<lastmod>2024-03-25T09:00:00+01:00</lastmod>
+<lastmod>2024-03-25T04:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/annoucements/2024-corpus-finalization/</loc>
+<lastmod>2024-04-18T04:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/annoucements/2024-timeline/</loc>
+<lastmod>2024-05-30T05:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/annoucements/2024-track-guidelines/</loc>
+<lastmod>2024-07-19T05:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -22,6 +34,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/assets/pdf/mm_track.pdf</loc>
-<lastmod>2024-02-23T17:03:34+01:00</lastmod>
+<lastmod>2024-02-23T11:03:34-05:00</lastmod>
 </url>
 </urlset>

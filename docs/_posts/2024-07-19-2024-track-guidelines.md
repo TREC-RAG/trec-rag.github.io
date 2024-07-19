@@ -1,6 +1,6 @@
 ---
 title: "TREC 2024 RAG Track Guidelines"
-date: 2024-07-09T09:00:00-00:00
+date: 2024-07-19T09:00:00-00:00
 categories:
   - Annoucements
 tags:
@@ -12,10 +12,10 @@ classes: wide
 toc: false
 ---
 
-> Version 1.0. Last Updated: July 9, 2024
+> Version 1.0. Last Updated: July 19, 2024
 
 Participating teams will receive both the MS MARCO V2.1 document & segment collection and a list of topic descriptions.
-For each topic, participants have the choice to participate in either all or any of three tasks introduced this RAG this year. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description (containing upto a maximum of 300 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
+For each topic, participants have the choice to participate in either all or any of three tasks introduced this RAG this year. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description (containing upto a maximum of 400 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
 
 > Participate in our RAG Track by registering for TREC at this [website](https://trec.nist.gov/pubs/call2024.html). Test topics will be released by August 4, 2024 & Submit your participating runs by August 11, 2024!
 
@@ -91,37 +91,38 @@ MS MARCO v2.1 segment collection as JSONL: <`msmarco_v2.1_doc_segmented_XX.json.
 ```
 
 ### Output Format (Ranked Results)
-Participants should provide their output in the standard TREC format containing top-k=`20` MS MARCO v2.1 segments as TSV: <`r_output_trec_rag_2024.tsv`> for each individual topic. Each set of ranked results for a set of topics appears in a single file. We will take a maximum of 20 results from each participant, more than 20 results will be truncated. Each line of this file contains six whitespace-separated entries:
-- Topic ID (taken from `trec_rag_2024_queries.tsv`)
+Participants should provide their output in the standard TREC format containing top-k=`100` MS MARCO v2.1 segments as TSV: <`r_output_trec_rag_2024.tsv`> for each individual topic. Each set of ranked results for a set of topics appears in a single file. We will take a maximum of 100 results from each participant, more than 100 results will be truncated. Note that our human judgment pools are likely not going to be more than 20 segments per query per run, having 100 helps us evaluate recall statistics. Each line of this file contains six whitespace-separated entries:
+- Topic ID (topic identifier taken from `trec_rag_2024_queries.tsv`)
 - The fixed string “Q0”
 - Segment ID (from the docid field in `msmarco_v2.1_doc_segmented_XX.json.gz`)
-- Score (integer or float, selected by your system)
-- Run ID where you should mention your team-name (e.g. my-team-name)
+- Rank (which is the rank of the segment retrieved)
+- Score (integer or float that generated the ranking. This score must be in non-increasing order)
+- Run ID (where you mention the ID of the run you are submitting, e.g., "rank_zephyr_best")
 
 
 ```bash
 ...
 # Example of how to return the top-k qrels
-2027497 Q0 msmarco_v2.1_doc_51_766815931#2_1606878413 0.99986017 my-team-name
-2027497 Q0 msmarco_v2.1_doc_51_766815931#1_1606876582 0.9996673 my-team-name
-2027497 Q0 msmarco_v2.1_doc_51_766815931#5_1606882767 0.99931216 my-team-name
-2027497 Q0 msmarco_v2.1_doc_51_766815931#6_1606884302 0.99923867 my-team-name
-2027497 Q0 msmarco_v2.1_doc_51_766815931#3_1606879951 0.99862224 my-team-name
-2027497 Q0 msmarco_v2.1_doc_51_766815931#4_1606881348 0.9985786 my-team-name
-2027497 Q0 msmarco_v2.1_doc_37_463237391#10_984448281 0.99851626 my-team-name
-2027497 Q0 msmarco_v2.1_doc_51_766815931#0_1606874600 0.9980733 my-team-name
-2027497 Q0 msmarco_v2.1_doc_37_463237391#9_984446615 0.99794924 my-team-name
-2027497 Q0 msmarco_v2.1_doc_28_472446307#22_1012988885 0.99647564 my-team-name
-2027497 Q0 msmarco_v2.1_doc_51_766815931#7_1606885873 0.9926826 my-team-name
-2027497 Q0 msmarco_v2.1_doc_28_472446307#21_1012986800 0.9922143 my-team-name
-2027497 Q0 msmarco_v2.1_doc_29_562342450#23_1356565296 0.9852146 my-team-name
-2027497 Q0 msmarco_v2.1_doc_29_562342450#17_1356555947 0.9829547 my-team-name
-2027497 Q0 msmarco_v2.1_doc_49_418787959#7_861728734 0.97997653 my-team-name
-2027497 Q0 msmarco_v2.1_doc_49_418787959#6_861726964 0.9739437 my-team-name
-2027497 Q0 msmarco_v2.1_doc_26_680625866#7_1289507527 0.97334224 my-team-name
-2027497 Q0 msmarco_v2.1_doc_10_1346272776#19_2165266355 0.9732915 my-team-name
-2027497 Q0 msmarco_v2.1_doc_56_1491300640#3_3012150696 0.97272736 my-team-name
-2027497 Q0 msmarco_v2.1_doc_10_672519892#5_1260010758 0.9719925 my-team-name
+2027497 Q0 msmarco_v2.1_doc_51_766815931#2_1606878413 1 0.99986017 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_51_766815931#1_1606876582 2 0.9996673 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_51_766815931#5_1606882767 3 0.99931216 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_51_766815931#6_1606884302 4 0.99923867 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_51_766815931#3_1606879951 5 0.99862224 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_51_766815931#4_1606881348 6 0.9985786 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_37_463237391#10_984448281 7 0.99851626 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_51_766815931#0_1606874600 8 0.9980733 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_37_463237391#9_984446615 9 0.99794924 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_28_472446307#22_1012988885 10 0.99647564 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_51_766815931#7_1606885873 11 0.9926826 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_28_472446307#21_1012986800 12 0.9922143 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_29_562342450#23_1356565296 13 0.9852146 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_29_562342450#17_1356555947 14 0.9829547 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_49_418787959#7_861728734 15 0.97997653 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_49_418787959#6_861726964 16 0.9739437 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_26_680625866#7_1289507527 17 0.97334224 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_10_1346272776#19_2165266355 18 0.9732915 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_56_1491300640#3_3012150696 19 0.97272736 rank_zephyr_best
+2027497 Q0 msmarco_v2.1_doc_10_672519892#5_1260010758 20 0.9719925 rank_zephyr_best
 ...
 ```
 
@@ -182,43 +183,55 @@ MS MARCO v2.1 segment collection as JSONL: <`msmarco_v2.1_doc_segmented_XX.json.
 
 ### Input Format (Ranked Results)
 
-Top-20 retrieved segments using our baseline retrieval system on the MS MARCO v2.1 segment collection: <`trec_rag_2024_qrels.tsv`> for each individual topic. Each set of ranked results for a set of topics appears in a single file. We will provide a maximum of 20 segments for each individual topic. Each line of this file contains four whitespace-separated entries:
+Top-20/100 retrieved segments for each individual topic using our baseline retrieval system on the MS MARCO v2.1 segment collection: <`baseline_r_out.tsv`>.
+We will provide a maximum of 100 segments for each individual topic. 
+This file has the same format as the output file for the retrieval task.
+
+```bash
 - Topic ID (taken from `trec_rag_2024_queries.tsv`)
 - The fixed string “Q0”
 - Segment ID (from the docid field in `msmarco_v2.1_doc_segmented_XX.json.gz`)
-- Score of 1 (indicating the segment contains relevant information for the topic)
-
-```bash
-# Example of the input oracle segments `trec_rag_2024_qrels.tsv`
-...
-2027497 Q0  msmarco_v2.1_doc_51_766815931#2_1606878413  1
-2027497 Q0  msmarco_v2.1_doc_51_766815931#1_1606876582  1
-2027497 Q0  msmarco_v2.1_doc_51_766815931#5_1606882767  1
-2027497 Q0  msmarco_v2.1_doc_51_766815931#6_1606884302  1
-2027497 Q0  msmarco_v2.1_doc_51_766815931#3_1606879951  1
-2027497 Q0  msmarco_v2.1_doc_51_766815931#4_1606881348  1
-2027497 Q0  msmarco_v2.1_doc_37_463237391#10_984448281  1
-2027497 Q0  msmarco_v2.1_doc_51_766815931#0_1606874600  1
-2027497 Q0  msmarco_v2.1_doc_37_463237391#9_984446615   1
-2027497 Q0  msmarco_v2.1_doc_28_472446307#22_1012988885 1
-2027497 Q0  msmarco_v2.1_doc_51_766815931#7_1606885873  1
-2027497 Q0  msmarco_v2.1_doc_28_472446307#21_1012986800 1
-2027497 Q0  msmarco_v2.1_doc_29_562342450#23_1356565296 1
-2027497 Q0  msmarco_v2.1_doc_29_562342450#17_1356555947 1
-2027497 Q0  msmarco_v2.1_doc_49_418787959#7_861728734   1
-2027497 Q0  msmarco_v2.1_doc_49_418787959#6_861726964   1
-2027497 Q0  msmarco_v2.1_doc_26_680625866#7_1289507527  1
-2027497 Q0  msmarco_v2.1_doc_10_1346272776#19_2165266355    1
-2027497 Q0  msmarco_v2.1_doc_56_1491300640#3_3012150696 1
-2027497 Q0  msmarco_v2.1_doc_10_672519892#5_1260010758  1
-...
+- Rank (which is the rank of the segment retrieved)
+- Score (integer or float that generated the ranking. This score must be in descending, non-increasing order)
+- Run ID (where you mention the ID of the run you are submitting, e.g., "rank_zephyr_best")
 ```
+
+We will additionally provide reranker requests JSONL file, <baseline_r_out.jsonl>, described at the end of the section [here](https://github.com/castorini/ragnarok/blob/main/docs/rag24.md#retrieval---bm25), where each line is a JSON object with the following fields:
+
+```python
+{
+    "query": {
+        "id": "2027497", # query_id
+        "text": "how often should you take your toddler to the potty when potty training" # query
+    }, 
+    "candidates": [
+        {
+            "docid": "msmarco_v2.1_doc_...",
+            "score": 18.2876,
+            "doc": 
+            {
+                "url": "...",
+                "title": "...",
+                "headings": "...",
+                "segment": "...",
+                "start_char": 1234,
+                "end_char": 4567
+            }
+        },
+        {
+            ...
+        }
+    ]
+}
+```
+
+Providing the url, title, headings, segment, start_char, and end_char fields for each candidate segment will help participants with limitations in downloading the entire MS MARCO v2.1 segment collection, to still get to participate in the AG task.
 
 ### Output Format (AG Output)
 
 Participants should provide their output in the standard JSONL format containing the following JSON information as <`ag_output_trec_rag_2024.jsonl`> for each individual topic. The final RAG answer should provided in the following JSON format. Each line of this JSONL file contains the following entries:
 
-- run_id (string) containing your team name (e.g. "my-awesome-team-name")
+- run_id (string) containing the run tag to your submission (e.g. "h2oloo-ragnarok-baseline")
 - topic_id (string) from the topic_id taken from `trec_rag_2024_queries.tsv`
 - topic (string) the sentence-level description of the topic taken from `trec_rag_2024_queries.tsv`
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
@@ -331,7 +344,7 @@ MS MARCO v2.1 segment collection as JSONL: <`msmarco_v2.1_doc_segmented_XX.json.
 ### Output Format (RAG Output)
 Output containing the following JSON information as <`rag_output_trec_rag_2024.jsonl`>. You can feel free to use the document collection with your own segmentation choice of yours, however, to make this collection reusable, we require the participant to map their custom chunked segments with segments available from MS MARCO V2.1 segment collection. Each line of this JSONL file contains the following entries:
 
-- run_id (string) containing your team name (e.g. "my-awesome-team-name")
+- run_id (string) containing your run tag (e.g. "h2oloo-e2e-ragnarok")
 - topic_id (string) from the topic_id taken from `trec_rag_2024_queries.tsv`
 - topic (string) the sentence-level description of the topic taken from `trec_rag_2024_queries.tsv`
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
@@ -370,7 +383,7 @@ Output containing the following JSON information as <`rag_output_trec_rag_2024.j
 ## Next Steps
 
 We encourage participants to start encoding the MS MARCO V2.1 segment corpus (120+ million) using their favourite retrieval system.
-We will soon release the test topics and once released would give a single week submitting their participating runs.
+We will soon release the test topics and once released would give a week or two to submit their participating runs.
 
 We encourage the community to provide us with constructive feedback regarding any task, or require us to further clarify any task.
 Please feel free to reach out to us via Twitter/Discord!
