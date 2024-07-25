@@ -27,7 +27,7 @@ This year at the TREC 2024 Retrieval-Augmented Generation (RAG) Track, we plan t
 
 **Relevance Assessment (Manual):** After the automatic scoring, an additional manual assessment using human annotators is performed to refine the assigned relevance scores. We construct the "Post-Edited Qrels" which will be used for the Retrieval (R) task evaluation.
 
-[1] Upadhyay et al. "UMBRELA: UMbrela is the (Open-Source Reproduction of the) Bing RELevance Assessor." https://arxiv.org/abs/2406.06519.
+[1] Upadhyay et al. "UMBRELA: UMbrela is the (Open-Source Reproduction of the) Bing RELevance Assessor." [https://arxiv.org/abs/2406.06519](https://arxiv.org/abs/2406.06519).
 
 -----
 ## Stage 2: Nugget Curation
