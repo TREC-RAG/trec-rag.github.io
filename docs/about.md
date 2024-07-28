@@ -44,10 +44,10 @@ The proposed evaluation methodology for the TREC 2024 RAG track is as follows:
 ## Timeline
 
 ```
-Development Topics and baselines released: Week 1, June 2024
+Development Topics and baselines released: June 2024
 Final Topics released: August 4th, 2024
-Submission deadline: August 11th, 2024
-Results and judgments (whatever form it takes) returned to participants: October 2024
+Submission deadline: August 19th, 2024 (AoE)
+Results and judgments returned to participants: October 2024
 TREC 2024 Conference: November 2024
 ```
 
