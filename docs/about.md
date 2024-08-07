@@ -3,6 +3,15 @@ permalink: /about/
 title: "What is TREC RAG?"
 ---
 
+## RAG Topics Released
+
+The RAG topics have now been released and can be found here:
+- RAG 2024 Topics (301 in total): [topics.rag24.test.txt](/assets/txt/topics.rag24.test.txt)
+
+We look forward to your submissions!
+
+## Overview
+
 Our white paper will be released soon!
 
 The [(TREC)](https://trec.nist.gov/) **R**etrieval-**A**ugmented **G**eneration Track is intended to foster innovation and research within the field of retrieval-augmented generation systems. This area of research focuses on combining retrieval methods - techniques for finding relevant information within large corpora with Large Language Models (LLMs) to enhance the ability of systems to produce relevant, accurate, updated and contextually appropriate content.
