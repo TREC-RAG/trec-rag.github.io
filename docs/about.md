@@ -3,8 +3,15 @@ permalink: /about/
 title: "What is TREC RAG?"
 ---
 
-## RAG Topics Released
+## Important Announcements
 
+#### Aug 09: Submission Deadline Extended
+
+The submission deadline has now been extended to **August 25th 2024 (AoE)**.
+
+Hope you can get those runs ready now! :smile:
+
+#### Aug 07: Topics Released
 The RAG topics have now been released and can be found here:
 - RAG 2024 Topics (301 in total): [topics.rag24.test.txt](/assets/txt/topics.rag24.test.txt)
 
@@ -55,7 +62,7 @@ The proposed evaluation methodology for the TREC 2024 RAG track is as follows:
 ```
 Development Topics and baselines released: June 2024
 Final Topics released: August 4th, 2024
-Submission deadline: August 19th, 2024 (AoE)
+Submission deadline (Extended): August 25th, 2024 (AoE)
 Results and judgments returned to participants: October 2024
 TREC 2024 Conference: November 2024
 ```
