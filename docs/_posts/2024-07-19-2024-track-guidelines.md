@@ -17,7 +17,7 @@ toc: false
 Participating teams will receive both the MS MARCO V2.1 document & segment collection and a list of topic descriptions.
 For each topic, participants have the choice to participate in either all or any of three tasks introduced this RAG this year. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description (containing upto a maximum of 400 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
 
-> Participate in our RAG Track by registering for TREC at this [website](https://trec.nist.gov/pubs/call2024.html). Test topics will be released by August 4, 2024 & Submit your participating runs by August 11, 2024!
+> Participate in our RAG Track by registering for TREC at this [website](https://trec.nist.gov/pubs/call2024.html). Test topics will be released by August 11, 2024 & submit your participating runs by August 25, 2024 (AOE)!
 
 ## Task Overview
 
