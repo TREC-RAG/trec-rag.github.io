@@ -12,7 +12,7 @@ toc: false
 
 ## TREC 2024 RAG UMBRELA QRELS RELEASED
 
-We have just released UMBRELA [1] qrels for 301 RAG test topics which will be used for the evaluations [2]:
+We have just released relevance judgments using UMBRELA [1] for the 301 RAG test topics which we used for our evaluations [2]. You can find them at:
 - RAG 2024 UMBRELA qrels: [qrels.rag24.test-umbrela-all.txt](/assets/txt/qrels.rag24.test-umbrela-all.txt)
 
 RAG 2024 Topics: [topics.rag24.test.txt](/assets/txt/topics.rag24.test.txt)
