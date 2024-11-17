@@ -10,8 +10,6 @@ classes: wide
 toc: false
 ---
 
-## TREC 2024 RAG UMBRELA QRELS RELEASED
-
 We have just released relevance judgments using UMBRELA [1] for the 301 RAG test topics which we used for our evaluations [2]. You can find them at:
 - RAG 2024 UMBRELA qrels: [qrels.rag24.test-umbrela-all.txt](/assets/txt/qrels.rag24.test-umbrela-all.txt)
 
@@ -19,7 +17,9 @@ RAG 2024 Topics: [topics.rag24.test.txt](/assets/txt/topics.rag24.test.txt)
 
 Command used with `trec_eval` (version: 9.0.4):
 ```
-trec_eval -c -m recall.100 -m ndcg_cut.100 qrels.rag24.test-umbrela-all.txt <result_file>
+trec_eval -c -m recall.100 qrels.rag24.test-umbrela-all.txt <result_file>
+trec_eval -c -m ndcg_cut.100 qrels.rag24.test-umbrela-all.txt <result_file>
+trec_eval -q -c -m ndcg_cut.20 qrels.rag24.test-umbrela-all.txt <result_file>
 ```
 
 [1] Upadhyay et al. "UMBRELA: UMbrela is the (Open-Source Reproduction of the) Bing RELevance Assessor." [https://arxiv.org/abs/2406.06519](https://arxiv.org/abs/2406.06519).
