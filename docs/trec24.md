@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /trec24/
 title: "What is TREC RAG?"
 ---
 
