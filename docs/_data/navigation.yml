@@ -8,6 +8,8 @@ main:
     url: /tags/
     #- title: "Sitemap"
     #  url: /sitemap/
+  - title: "TREC 2024"
+    url: /trec24/
 
 docs:
   - title: Getting Started
