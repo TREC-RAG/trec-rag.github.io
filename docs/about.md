@@ -13,7 +13,7 @@ The [(TREC)](https://trec.nist.gov/) **R**etrieval-**A**ugmented **G**eneration 
 
 The TREC 2024 RAG Track consisted of three tasks designed to evaluate various aspects of retrieval-augmented generation systems using the MS MARCO Segment v2.1 collection. The Retrieval (R) Task involved ranking and retrieving the most relevant text segments for a given set of queries. The Augmented Generation (AG) Task required participants to generate answers with attributions to supporting segments, using a fixed set of top-k segments provided by a baseline retrieval system. The Retrieval-Augmented Generation (RAG) Task allowed participants to use their own retrieval and chunking strategies, provided that their outputs were mapped to the MS MARCO Segment v2.1 collection to ensure reproducibility and facilitate evaluation.
 
-The TREC RAG Track aims to bring the research community together around a unified benchmark to evaluate the end-to-end performance of systems that combine retrieval and generation. By structuring participation through distinct but complementary tasks, the track enabled deeper analysis of individual system components and their interactions. It also encouraged the development of scalable, transparent methods by promoting consistent evaluation practices grounded in a shared dataset.
+The TREC RAG Track aims to bring the research community together around a unified benchmark to evaluate the end-to-end performance of systems that combine retrieval and generation. By structuring participation through distinct but complementary tasks, the track enabled deeper analysis of individual system components and their interactions.
 
 
 ## Organizers of TREC 2024 RAG Track
