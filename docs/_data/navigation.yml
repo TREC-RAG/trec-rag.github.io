@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
-  - title: "Categories"
+  - title: "Home"
     url: /
+  - title: "Updates"
+    url: /categories/
   - title: "Tags"
     url: /tags/
     #- title: "Sitemap"
