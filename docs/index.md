@@ -16,7 +16,7 @@ The TREC 2024 RAG Track consisted of three tasks designed to evaluate various as
 The TREC RAG Track aims to bring the research community together around a unified benchmark to evaluate the end-to-end performance of systems that combine retrieval and generation. By structuring participation through distinct but complementary tasks, the track enabled deeper analysis of individual system components and their interactions.
 
 
-## Organizers of TREC 2024 RAG Track
+## Organizers of TREC 2025 RAG Track
 
 - Shivani Upadhyay, University of Waterloo
 - Ronak Pradeep, University of Waterloo
