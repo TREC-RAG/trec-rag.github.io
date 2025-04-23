@@ -15,6 +15,17 @@ The TREC 2024 RAG Track consisted of three tasks designed to evaluate various as
 
 The TREC RAG Track aims to bring the research community together around a unified benchmark to evaluate the end-to-end performance of systems that combine retrieval and generation. By structuring participation through distinct but complementary tasks, the track enabled deeper analysis of individual system components and their interactions.
 
+## 2025 Tasks Outline
+
+We are conducting three tasks in TREC 2025 RAG track. These tasks are as follows:
+
+1. **(R) Retrieval Task** : The "R" track requires participants to rank and retrieve the most relevant segments from the MS MARCO Segment v2.1 collection based on a given set of input topics (queries).
+
+2. **(AG) Augmented Generation Task** : The "AG" track requires participants to generate RAG answers, including attributions to supporting segments from the MS MARCO Segment v2.1 collection. Participants would need to use the top-k relevant segments provided by our baseline retrieval system.
+
+3. **(RAG) Retrieval-Augmented Task** : The "RAG" track requires participants to generate RAG answers along with attributions for supporting segments from the MS MARCO Segment v2.1 collection. Participants can choose their own retrieval system and chunking technique. We only require the participants to map their chunk to MS MARCO Segment v2.1 for reprodubicility and ease of evaluation.
+
+Details on how to submit your runs will be shared shortly.
 
 ## Organizers of TREC 2025 RAG Track
 
