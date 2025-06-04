@@ -3,10 +3,6 @@ permalink: /
 title: "What is TREC RAG?"
 ---
 
-## Announcements
-
-Stay tuned for more information for the TREC RAG 2025 Track!
-
 ## Overview
 
 The [(TREC)](https://trec.nist.gov/) **R**etrieval-**A**ugmented **G**eneration Track is intended to foster innovation and research within the field of retrieval-augmented generation systems. This area of research focuses on combining retrieval methods - techniques for finding relevant information within large corpora with Large Language Models (LLMs) to enhance the ability of systems to produce relevant, accurate, updated and contextually appropriate content.
@@ -27,6 +23,12 @@ We are conducting three tasks in TREC 2025 RAG track. These tasks are as follows
 
 Details on how to submit your runs will be shared shortly.
 
+## Announcements
+
+The TREC 2025 RAG Corpus details are available [here](https://trec-rag.github.io/annoucements/2025-rag25-corpus/).
+
+Stay tuned for more information for the TREC RAG 2025 Track!
+
 ## Organizers of TREC 2025 RAG Track
 
 - Shivani Upadhyay, University of Waterloo
@@ -34,3 +36,16 @@ Details on how to submit your runs will be shared shortly.
 - Nandan Thakur, University of Waterloo
 - Jimmy Lin, University of Waterloo
 - Nick Craswell, Microsoft
+
+## Explore More RAG Tracks at TREC 2025
+
+Please check out the following tracks that also support RAG-based approaches — cross-participation is encouraged!
+
+
+[TREC BioGEN 2025 Track](https://trec-biogen.github.io/docs/)
+
+[TREC DRAGUN 2025 Track](https://trec-dragun.github.io/)
+
+[TREC IKAT 2025 Track](https://www.trecikat.com)
+
+[TREC RAGTIME 2025 Track](https://trec-ragtime.github.io/)
