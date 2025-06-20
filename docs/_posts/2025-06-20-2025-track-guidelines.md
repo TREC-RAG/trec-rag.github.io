@@ -23,7 +23,7 @@ For each topic, participants have the choice to participate in either all or any
 # Tasks Overview
 
 ## Retrieval Task (R)
-The retrieval task as the name suggets is an ad-hoc information retrieval task similar to the previous [TREC Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning.html). Participating systems will receive a list of topics and the MS MARCO V2.1 segment collection. For each topic, the system needs to return the TREC runfile containing the ranked list containing the top 20 relevant segment IDs from the collection. The topics provided will be non-factoid and require long-form answer generation.
+The retrieval task as the name suggets is an ad-hoc information retrieval task similar to the previous [TREC Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning.html). Participating systems will receive a list of topics and the MS MARCO V2.1 segment collection. For each topic, the system needs to return the TREC runfile containing the ranked list containing the top 20 relevant segment IDs from the collection. The topics provided will be non-factoid 2-3 sentence long description and require long-form answer generation.
 
 > The “R” track emulates the previous TREC-DL 2022/2023 tracks is for the IR audience, however, the main difference lies in using document *chunks* from the MS MARCO V2.1 segment collection instead of the MS MARCO v2.0 passage collection.
 
@@ -269,7 +269,7 @@ Participants should provide their output in the standard JSONL format containing
         'msmarco_v2.1_doc_03_952487890#11_1612181372',
         'msmarco_v2.1_doc_24_1132995963#0_2408027424'
         ]
-    "response_length": 235, 
+    "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", "citations": [0, 8, 15]}, 
             {"text": "Technological innovations like the steam engine, telegraph, spinning jenny, and power loom dramatically increased productivity and reshaped industries.", "citations": [8, 16]}, 
@@ -402,7 +402,7 @@ Output containing the following JSON information as <`rag_output_trec_rag_2025.j
         'msmarco_v2.1_doc_03_952487890#11_1612181372',
         'msmarco_v2.1_doc_24_1132995963#0_2408027424'
         ]
-    "response_length": 235, 
+    "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", "citations": [0, 8, 15]}, 
             {"text": "Technological innovations like the steam engine, telegraph, spinning jenny, and power loom dramatically increased productivity and reshaped industries.", "citations": [8, 16]}, 
