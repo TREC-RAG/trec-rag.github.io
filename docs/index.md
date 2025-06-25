@@ -25,7 +25,10 @@ Details on how to submit your runs will be shared shortly.
 
 ## Announcements
 
-The TREC 2025 RAG Corpus details are available [here](https://trec-rag.github.io/annoucements/2025-rag25-corpus/).
+* The TREC 2025 RAG Corpus details are available [here](https://trec-rag.github.io/annoucements/2025-rag25-corpus/).
+
+* (<span style="color: red; font-weight: bold;">New</span>) The preliminary schedule for TREC 2025 RAG is available [here](https://trec-rag.github.io/annoucements/2025-timeline/).
+
 
 Stay tuned for more information for the TREC RAG 2025 Track!
 
