@@ -11,8 +11,6 @@ classes: wide
 toc: false
 ---
 
-> Version 1.0. Last Updated: June 20, 2025
-
 Participating teams will receive both the MS MARCO V2.1 document & segment collection and a list of topic descriptions.
 For each topic, participants have the choice to participate in either all or any of three tasks following last year's format. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
 
@@ -23,7 +21,7 @@ For each topic, participants have the choice to participate in either all or any
 # Tasks Overview
 
 ## Retrieval Task (R)
-The retrieval task as the name suggets is an ad-hoc information retrieval task similar to the previous [TREC Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning.html). Participating systems will receive a list of topics and the MS MARCO V2.1 segment collection. For each topic, the system needs to return the TREC runfile containing the ranked list containing the top 20 relevant segment IDs from the collection. The topics provided will be non-factoid 2-3 sentence long description and require long-form answer generation.
+The retrieval task as the name suggets is an ad-hoc information retrieval task similar to the previous [TREC Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning.html). Participating systems will receive a list of topics and the MS MARCO V2.1 segment collection. For each topic, the system needs to return the TREC runfile containing the ranked list containing the top 100 relevant segment IDs from the collection. The topics provided will be non-factoid 2-3 sentence long description and require long-form answer generation.
 
 > The “R” track emulates the previous TREC-DL 2022/2023 tracks is for the IR audience, however, the main difference lies in using document *chunks* from the MS MARCO V2.1 segment collection instead of the MS MARCO v2.0 passage collection.
 
@@ -84,7 +82,7 @@ MS MARCO v2.1 segment collection as JSONL: <`msmarco_v2.1_doc_segmented_XX.json.
 ```
 
 ### Output Format (Ranked Results)
-Participants should provide their output in the standard TREC format containing top-k=`100` MS MARCO v2.1 segments as TSV: <`r_output_trec_rag_2025.tsv`> for each individual topic. Each set of ranked results for a set of topics appears in a single file. We will take a maximum of 100 results from each participant, more than 100 results will be truncated. Note that our human judgment pools are likely not going to be more than 20 segments per query per run, having 100 helps us evaluate recall statistics. Each line of this file contains six whitespace-separated entries:
+Participants should provide their output in the standard TREC format containing top-k=`100` MS MARCO v2.1 segments as TSV: <`r_output_trec_rag_2025.tsv`> for each individual topic. Each set of ranked results for a set of topics appears in a single file. We will take a maximum of 100 results from each participant, more than 100 results will be truncated. Each line of this file contains six whitespace-separated entries:
 - Topic ID (topic identifier taken from `trec_rag_2025_queries.jsonl`)
 - The fixed string “Q0”
 - Segment ID (from the docid field in `msmarco_v2.1_doc_segmented_XX.json.gz`)
@@ -183,7 +181,7 @@ MS MARCO v2.1 segment collection as JSONL: <`msmarco_v2.1_doc_segmented_XX.json.
 
 ### Input Format (Ranked Results)
 
-Top-20/100 retrieved segments for each individual topic using our baseline retrieval system on the MS MARCO v2.1 segment collection: <`baseline_r_out.tsv`>.
+Top-100 retrieved segments for each individual topic using our baseline retrieval system on the MS MARCO v2.1 segment collection: <`baseline_r_out.tsv`>.
 We will provide a maximum of 100 segments for each individual topic. 
 This file has the same format as the output file for the retrieval task.
 
