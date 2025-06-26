@@ -238,11 +238,13 @@ Format 1:
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
 - response_length (integer) containing the total words present in the overall RAG response.
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list.
+- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
 ```python
 {
+    "team_id": "organizers",
     "run_id": "my-awesome-team-name",
+    "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
@@ -285,37 +287,16 @@ Format 2 (similar to other tracks):
 - run_id (string) containing your run tag (e.g. "h2oloo-e2e-ragnarok")
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
 - response_length (integer) containing the total words present in the overall RAG response.
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment.
+- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
 
 ```python
 {
+    "team_id": "organizers",
     "run_id": "my-awesome-team-name",
+    "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
-    "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
-        'msmarco_v2.1_doc_16_1041913392#3_1268938142',
-        'msmarco_v2.1_doc_14_1198634226#9_2470404444',
-        'msmarco_v2.1_doc_12_201312571#0_394394285',
-        'msmarco_v2.1_doc_02_1169633399#2_1963227104',
-        'msmarco_v2.1_doc_23_947922085#6_2108546861',
-        'msmarco_v2.1_doc_23_564615817#13_1256293300',
-        'msmarco_v2.1_doc_20_59107962#5_138816780',
-        'msmarco_v2.1_doc_24_1126649978#7_2394434427',
-        'msmarco_v2.1_doc_12_201312571#1_394396180',
-        'msmarco_v2.1_doc_23_564615817#12_1256290771',
-        'msmarco_v2.1_doc_13_730347647#3_1661787859',
-        'msmarco_v2.1_doc_03_952676544#10_1612297487',
-        'msmarco_v2.1_doc_02_1708666011#1_2905243606',
-        'msmarco_v2.1_doc_29_6222783#1_12232334',
-        'msmarco_v2.1_doc_03_1565360904#14_2631260538',
-        'msmarco_v2.1_doc_16_339852969#2_601767683',
-        'msmarco_v2.1_doc_05_1682672492#12_3232855509',
-        'msmarco_v2.1_doc_24_1126649978#8_2394436421',
-        'msmarco_v2.1_doc_03_952487890#11_1612181372',
-        'msmarco_v2.1_doc_24_1132995963#0_2408027424'
-        ]
     "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", 
@@ -427,11 +408,13 @@ Format 1:
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
 - response_length (integer) containing the total words present in the overall RAG response.
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list.
+- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
 ```python
 {
+    "team_id": "organizers",
     "run_id": "my-awesome-team-name",
+    "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
@@ -474,37 +457,16 @@ Format 2 (similar to other tracks):
 - run_id (string) containing your run tag (e.g. "h2oloo-e2e-ragnarok")
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
 - response_length (integer) containing the total words present in the overall RAG response.
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment.
+- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
 
 ```python
 {
+    "team_id": "organizers",
     "run_id": "my-awesome-team-name",
+    "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
-    "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
-        'msmarco_v2.1_doc_16_1041913392#3_1268938142',
-        'msmarco_v2.1_doc_14_1198634226#9_2470404444',
-        'msmarco_v2.1_doc_12_201312571#0_394394285',
-        'msmarco_v2.1_doc_02_1169633399#2_1963227104',
-        'msmarco_v2.1_doc_23_947922085#6_2108546861',
-        'msmarco_v2.1_doc_23_564615817#13_1256293300',
-        'msmarco_v2.1_doc_20_59107962#5_138816780',
-        'msmarco_v2.1_doc_24_1126649978#7_2394434427',
-        'msmarco_v2.1_doc_12_201312571#1_394396180',
-        'msmarco_v2.1_doc_23_564615817#12_1256290771',
-        'msmarco_v2.1_doc_13_730347647#3_1661787859',
-        'msmarco_v2.1_doc_03_952676544#10_1612297487',
-        'msmarco_v2.1_doc_02_1708666011#1_2905243606',
-        'msmarco_v2.1_doc_29_6222783#1_12232334',
-        'msmarco_v2.1_doc_03_1565360904#14_2631260538',
-        'msmarco_v2.1_doc_16_339852969#2_601767683',
-        'msmarco_v2.1_doc_05_1682672492#12_3232855509',
-        'msmarco_v2.1_doc_24_1126649978#8_2394436421',
-        'msmarco_v2.1_doc_03_952487890#11_1612181372',
-        'msmarco_v2.1_doc_24_1132995963#0_2408027424'
-        ]
     "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", 
