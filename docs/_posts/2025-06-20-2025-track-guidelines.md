@@ -23,7 +23,7 @@ For each topic, participants have the choice to participate in either all or any
 ## Retrieval Task (R)
 The retrieval task as the name suggets is an ad-hoc information retrieval task similar to the previous [TREC Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning.html). Participating systems will receive a list of topics and the MS MARCO V2.1 segment collection. For each topic, the system needs to return the TREC runfile containing the ranked list containing the top 100 relevant segment IDs from the collection. The topics provided will be non-factoid 2-3 sentence long description and require long-form answer generation.
 
-> The “R” track emulates the previous TREC-DL 2022/2023 tracks is for the IR audience, however, the main difference lies in using document *chunks* from the MS MARCO V2.1 segment collection instead of the MS MARCO v2.0 passage collection.
+> The “R” track emulates the previous year's TREC R task and TREC-DL 2022/2023 tracks is for the IR audience, however, the main difference lies in using document *chunks* from the MS MARCO V2.1 segment collection instead of the MS MARCO v2.0 passage collection.
 
 ### Input Format (Topics)
 
@@ -93,7 +93,7 @@ Participants should provide their output in the standard TREC format containing 
 
 ```bash
 ...
-# Example of how to return the top-k qrels
+# Example of how to return the top-100 qrels
 1 Q0 msmarco_v2.1_doc_16_1041913392#3_1268938142 1 0.613857 my-run
 1 Q0 msmarco_v2.1_doc_14_1198634226#9_2470404444 2 0.606288 my-run
 1 Q0 msmarco_v2.1_doc_12_201312571#0_394394285 3 0.605989 my-run
@@ -242,9 +242,11 @@ Format 1:
 
 ```python
 {
-    "team_id": "my-awesome-team",
-    "run_id": "my-awesome-run",
-    "type": "automatic",
+    "metadata": {
+        "team_id": "my-awesome-team",
+        "run_id": "my-awesome-run",
+        "type": "automatic",
+    },
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
@@ -294,9 +296,11 @@ Format 2 (similar to other tracks):
 
 ```python
 {
-    "team_id": "my-awesome-team",
-    "run_id": "my-awesome-run",
-    "type": "automatic",
+    "metadata": {
+        "team_id": "my-awesome-team",
+        "run_id": "my-awesome-run",
+        "type": "automatic",
+    },
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
     "response_length": 145, 
@@ -416,9 +420,11 @@ Format 1:
 
 ```python
 {
-    "team_id": "my-awesome-team",
-    "run_id": "my-awesome-run",
-    "type": "automatic",
+    "metadata": {
+        "team_id": "my-awesome-team",
+        "run_id": "my-awesome-run",
+        "type": "automatic",
+    },
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
@@ -468,9 +474,11 @@ Format 2 (similar to other tracks):
 
 ```python
 {
-    "team_id": "my-awesome-team",
-    "run_id": "my-awesome-run",
-    "type": "automatic",
+    "metadata": {
+        "team_id": "my-awesome-team",
+        "run_id": "my-awesome-run",
+        "type": "automatic",
+    },
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
     "response_length": 145, 
@@ -492,8 +500,6 @@ Format 2 (similar to other tracks):
         ]
 }
 ```
-
-You can find baseline end-to-end RAG systems for the development sets leveraging Anserini, RankLLM, and Ragnarök [here](https://github.com/castorini/ragnarok/blob/main/docs/rag24.md)!
 
 ## Next Steps
 
