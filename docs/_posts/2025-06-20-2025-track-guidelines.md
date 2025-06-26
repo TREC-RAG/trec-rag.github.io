@@ -233,7 +233,9 @@ Participants should provide their output in the standard JSONL format containing
 
 Format 1:
 
-- run_id (string) containing the run tag to your submission (e.g. "h2oloo-ragnarok-baseline")
+- team_id (string) containing your team tag
+- run_id (string) containing your run tag
+- type (string) run type, manual or automatic
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
@@ -242,8 +244,8 @@ Format 1:
 
 ```python
 {
-    "team_id": "organizers",
-    "run_id": "my-awesome-team-name",
+    "team_id": "my-awesome-team",
+    "run_id": "my-awesome-run",
     "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
@@ -284,7 +286,9 @@ Format 1:
 
 Format 2 (similar to other tracks):
 
-- run_id (string) containing your run tag (e.g. "h2oloo-e2e-ragnarok")
+- team_id (string) containing your team tag
+- run_id (string) containing your run tag
+- type (string) run type, manual or automatic
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - response_length (integer) containing the total words present in the overall RAG response.
@@ -292,8 +296,8 @@ Format 2 (similar to other tracks):
 
 ```python
 {
-    "team_id": "organizers",
-    "run_id": "my-awesome-team-name",
+    "team_id": "my-awesome-team",
+    "run_id": "my-awesome-run",
     "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
@@ -403,7 +407,9 @@ Output containing the following JSON information as <`rag_output_trec_rag_2025.j
 
 Format 1:
 
-- run_id (string) containing your run tag (e.g. "h2oloo-e2e-ragnarok")
+- team_id (string) containing your team tag
+- run_id (string) containing your run tag
+- type (string) run type, manual or automatic
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
@@ -412,8 +418,8 @@ Format 1:
 
 ```python
 {
-    "team_id": "organizers",
-    "run_id": "my-awesome-team-name",
+    "team_id": "my-awesome-team",
+    "run_id": "my-awesome-run",
     "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
@@ -454,7 +460,9 @@ Format 1:
 
 Format 2 (similar to other tracks):
 
-- run_id (string) containing your run tag (e.g. "h2oloo-e2e-ragnarok")
+- team_id (string) containing your team tag
+- run_id (string) containing your run tag
+- type (string) run type, manual or automatic
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - response_length (integer) containing the total words present in the overall RAG response.
@@ -462,8 +470,8 @@ Format 2 (similar to other tracks):
 
 ```python
 {
-    "team_id": "organizers",
-    "run_id": "my-awesome-team-name",
+    "team_id": "my-awesome-team",
+    "run_id": "my-awesome-run",
     "type": "automatic",
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
