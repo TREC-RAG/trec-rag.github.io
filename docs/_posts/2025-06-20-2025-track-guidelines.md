@@ -31,8 +31,6 @@ The retrieval task as the name suggets is an ad-hoc information retrieval task s
 
 List of queries as topics as JSONL: <`trec_rag_2025_queries.jsonl`>, with each line containing the id and a topic of 2-3 sentences long narrative description.
 
-📂 Download Sample Topic File: [topics.rag25.sample.jsonl](/assets/jsonl/topics.rag25.sample.jsonl)
-
 ```bash
 # Example of `trec_rag_2025_queries.jsonl`
 ...
@@ -130,8 +128,6 @@ The Augmented Generation task emulates the modern-day RAG task to return the sum
 ### Input Format (Topics)
 
 List of queries as topics as JSONL: <`trec_rag_2025_queries.jsonl`>, with each line containing the narrative_id and a 2-3 sentence long description of the topic.
-
-📂 Download Sample Topic File: [topics.rag25.sample.jsonl](/assets/jsonl/topics.rag25.sample.jsonl)
 
 ```bash
 # Example of `trec_rag_2025_queries.jsonl`
@@ -349,8 +345,6 @@ Format 2 (similar to other tracks):
 ### Input Format (Topics)
 
 List of queries as topics as JSONL: <`trec_rag_2025_queries.jsonl`>, with each line containing the narrative_id and 2-3 sentence long description of the topic.
-
-📂 Download Sample Topic File: [topics.rag25.sample.jsonl](/assets/jsonl/topics.rag25.sample.jsonl)
 
 ```bash
 # Example of `trec_rag_2025_queries.jsonl`
