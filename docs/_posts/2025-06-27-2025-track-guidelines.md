@@ -1,6 +1,6 @@
 ---
 title: "TREC 2025 RAG Track Guidelines"
-date: 2025-06-20T00:00:00-00:00
+date: 2025-06-27T00:00:00-00:00
 categories:
   - Annoucements
 tags:
