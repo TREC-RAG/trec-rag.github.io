@@ -29,6 +29,8 @@ Details on how to submit your runs will be shared shortly.
 
 * (<span style="color: red; font-weight: bold;">New</span>) The preliminary schedule for TREC 2025 RAG is available [here](https://trec-rag.github.io/annoucements/2025-timeline/).
 
+* (<span style="color: red; font-weight: bold;">New</span>) The TREC 2025 RAG guidelines have been released and are accessible [here](https://trec-rag.github.io/annoucements/2025-track-guidelines/).
+
 
 Stay tuned for more information for the TREC RAG 2025 Track!
 
