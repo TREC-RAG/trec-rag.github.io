@@ -10,7 +10,7 @@ classes: wide
 toc: false
 ---
 
-## The TREC 2025 RAG Competition Is Now Live!
+## The TREC 2025 RAG Competition is Now Live!
 
 We’re excited to announce the official launch of the TREC 2025 RAG competition!
 Our set of 105 RAG test narratives is now available and will be used for this year’s challenge:

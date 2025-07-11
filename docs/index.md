@@ -31,7 +31,7 @@ Details on how to submit your runs will be shared shortly.
 
 * (<span style="color: red; font-weight: bold;">New</span>) The TREC 2025 RAG guidelines have been released and are accessible [here](https://trec-rag.github.io/annoucements/2025-track-guidelines/).
 
-* (<span style="color: red; font-weight: bold;">New</span>) Topics released for TREC 2025 RAG [trec_rag_2025_queries.jsonl](/assets/jsonl/trec_rag_2025_queries.jsonl).
+* (<span style="color: red; font-weight: bold;">New</span>) Topics released for TREC 2025 RAG [here](https://trec-rag.github.io/annoucements/2025-topics-released/).
 
 
 Stay tuned for more information for the TREC RAG 2025 Track!
