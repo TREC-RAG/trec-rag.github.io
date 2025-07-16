@@ -236,7 +236,7 @@ Format 1:
 - type (string) run type, manual or automatic
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
+- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - response_length (integer) containing the total words present in the overall RAG response.
 - answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
@@ -249,7 +249,7 @@ Format 1:
     },
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
-    "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
+    "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
         'msmarco_v2.1_doc_12_201312571#0_394394285',
@@ -269,7 +269,8 @@ Format 1:
         'msmarco_v2.1_doc_05_1682672492#12_3232855509',
         'msmarco_v2.1_doc_24_1126649978#8_2394436421',
         'msmarco_v2.1_doc_03_952487890#11_1612181372',
-        'msmarco_v2.1_doc_24_1132995963#0_2408027424'
+        'msmarco_v2.1_doc_24_1132995963#0_2408027424',
+        ...
         ]
     "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
@@ -414,7 +415,7 @@ Format 1:
 - type (string) run type, manual or automatic
 - narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 20 segments is allowed)
+- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - response_length (integer) containing the total words present in the overall RAG response.
 - answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
@@ -427,7 +428,7 @@ Format 1:
     },
     "narrative_id": 1, # topic_id
     "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
-    "references": [ # top-k segments returned used from the retrieval step. We have k equals to 20 segments for this example.
+    "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
         'msmarco_v2.1_doc_12_201312571#0_394394285',
@@ -447,7 +448,8 @@ Format 1:
         'msmarco_v2.1_doc_05_1682672492#12_3232855509',
         'msmarco_v2.1_doc_24_1126649978#8_2394436421',
         'msmarco_v2.1_doc_03_952487890#11_1612181372',
-        'msmarco_v2.1_doc_24_1132995963#0_2408027424'
+        'msmarco_v2.1_doc_24_1132995963#0_2408027424',
+        ...
         ]
     "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
