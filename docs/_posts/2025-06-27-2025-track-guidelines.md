@@ -34,16 +34,8 @@ List of queries as topics as JSONL: <`trec_rag_2025_queries.jsonl`>, with each l
 ```bash
 # Example of `trec_rag_2025_queries.jsonl`
 ...
-[
-    {
-        "id": "1",
-        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality."
-    },
-    {
-        "id": "2",
-        "narrative": "I'm trying to understand how prisons operate, including issues like inmate rights, rehabilitation, voting, and the impact of race and profit motives on incarceration. Can you explain how correctional facilities address mental health, discipline, and recidivism, and also discuss the ethical and legal challenges inmates face?"
-    }
-]
+{"id": "1", "title": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality."}
+{"id": "2", "title": "I'm trying to understand how prisons operate, including issues like inmate rights, rehabilitation, voting, and the impact of race and profit motives on incarceration. Can you explain how correctional facilities address mental health, discipline, and recidivism, and also discuss the ethical and legal challenges inmates face?"}
 ...
 ```
 
@@ -132,16 +124,8 @@ List of queries as topics as JSONL: <`trec_rag_2025_queries.jsonl`>, with each l
 ```bash
 # Example of `trec_rag_2025_queries.jsonl`
 ...
-[
-    {
-        "id": "1",
-        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality."
-    },
-    {
-        "id": "2",
-        "narrative": "I'm trying to understand how prisons operate, including issues like inmate rights, rehabilitation, voting, and the impact of race and profit motives on incarceration. Can you explain how correctional facilities address mental health, discipline, and recidivism, and also discuss the ethical and legal challenges inmates face?"
-    }
-]
+{"id": "1", "title": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality."}
+{"id": "2", "title": "I'm trying to understand how prisons operate, including issues like inmate rights, rehabilitation, voting, and the impact of race and profit motives on incarceration. Can you explain how correctional facilities address mental health, discipline, and recidivism, and also discuss the ethical and legal challenges inmates face?"}
 ...
 ```
 
@@ -201,8 +185,8 @@ We will additionally provide reranker requests JSONL file, <`baseline_r_out.json
 ```python
 {
     "query": {
-        "narrative_id": 1, # topic_id
-        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality." # narrative
+        "qid": 1, # narrative_id
+        "text": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality." # narrative
     }, 
     "candidates": [
         {
@@ -250,8 +234,8 @@ Format 1:
         "run_id": "my-awesome-run",
         "type": "automatic",
     },
-    "narrative_id": 1, # topic_id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
+    "narrative_id": 1, # id
+    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
@@ -308,8 +292,8 @@ Format 2 (similar to other tracks):
         "run_id": "my-awesome-run",
         "type": "automatic",
     },
-    "narrative_id": 1, # topic_id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
+    "narrative_id": 1, # id
+    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
@@ -367,16 +351,8 @@ List of queries as topics as JSONL: <`trec_rag_2025_queries.jsonl`>, with each l
 ```bash
 # Example of `trec_rag_2025_queries.jsonl`
 ...
-[
-    {
-        "id": "1",
-        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality."
-    },
-    {
-        "id": "2",
-        "narrative": "I'm trying to understand how prisons operate, including issues like inmate rights, rehabilitation, voting, and the impact of race and profit motives on incarceration. Can you explain how correctional facilities address mental health, discipline, and recidivism, and also discuss the ethical and legal challenges inmates face?"
-    }
-]
+{"id": "1", "title": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality."}
+{"id": "2", "title": "I'm trying to understand how prisons operate, including issues like inmate rights, rehabilitation, voting, and the impact of race and profit motives on incarceration. Can you explain how correctional facilities address mental health, discipline, and recidivism, and also discuss the ethical and legal challenges inmates face?"}
 ...
 ```
 
@@ -457,8 +433,8 @@ Format 1:
         "run_id": "my-awesome-run",
         "type": "automatic",
     },
-    "narrative_id": 1, # topic_id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
+    "narrative_id": 1, # id
+    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
@@ -515,8 +491,8 @@ Format 2 (similar to other tracks):
         "run_id": "my-awesome-run",
         "type": "automatic",
     },
-    "narrative_id": 1, # topic_id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # query
+    "narrative_id": 1, # id
+    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
