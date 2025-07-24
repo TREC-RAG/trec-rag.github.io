@@ -11,10 +11,10 @@ classes: wide
 toc: false
 ---
 
-> Version 1.0. Last Updated: July 21, 2025
+> Version 1.0. Last Updated: July 23, 2025
 
 Participating teams will receive both the MS MARCO V2.1 document & segment collection and a list of topic descriptions.
-For each topic, participants have the choice to participate in either all or any of three tasks following last year's format. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
+For each topic, participants have the choice to participate in either all or any of three tasks following last year's format. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description (containing upto a maximum of 400 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
 
 > Participate in our RAG Track by registering for TREC at this [website](https://trec.nist.gov).
 
@@ -180,7 +180,7 @@ This file has the same format as the output file for the retrieval task.
 - Run ID (where you mention the ID of the run you are submitting)
 ```
 
-We will additionally provide reranker requests JSONL file, <`baseline_r_out.jsonl``>, described at the end of the section [here](https://github.com/castorini/ragnarok/blob/main/docs/rag24.md#retrieval---bm25), where each line is a JSON object with the following fields:
+We will additionally provide reranker requests JSONL file, <`baseline_r_out.jsonl``>, described at the end of the section [here](https://github.com/castorini/ragnarok/blob/main/docs/rag25.md#retrieval---bm25), where each line is a JSON object with the following fields:
 
 ```python
 {
@@ -220,11 +220,10 @@ Format 1:
 - team_id (string) containing your team tag
 - run_id (string) containing your run tag
 - type (string) run type, manual or automatic
-- narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
+- narrative_id (string) from the id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - prompt (string, optional) contianing the detailed prompt used for response generation.
-- response_length (integer) containing the total words present in the overall RAG response.
+- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
 ```python
@@ -233,9 +232,10 @@ Format 1:
         "team_id": "my-awesome-team",
         "run_id": "my-awesome-run",
         "type": "automatic",
+        "narrative_id": 1, # id
+        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
+        "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
     },
-    "narrative_id": 1, # id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
@@ -259,8 +259,6 @@ Format 1:
         'msmarco_v2.1_doc_24_1132995963#0_2408027424',
         ...
     ],
-    "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
-    "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", "citations": [0, 8, 15]}, 
             {"text": "Technological innovations like the steam engine, telegraph, spinning jenny, and power loom dramatically increased productivity and reshaped industries.", "citations": [8, 16]}, 
@@ -278,11 +276,10 @@ Format 2 (similar to other tracks):
 - team_id (string) containing your team tag
 - run_id (string) containing your run tag
 - type (string) run type, manual or automatic
-- narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
+- narrative_id (string) from the id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - prompt (string, optional) contianing the detailed prompt used for response generation.
-- response_length (integer) containing the total words present in the overall RAG response.
+- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
 
 ```python
@@ -291,9 +288,10 @@ Format 2 (similar to other tracks):
         "team_id": "my-awesome-team",
         "run_id": "my-awesome-run",
         "type": "automatic",
+        "narrative_id": 1, # id
+        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
+        "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
     },
-    "narrative_id": 1, # id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
@@ -317,8 +315,6 @@ Format 2 (similar to other tracks):
         'msmarco_v2.1_doc_24_1132995963#0_2408027424',
         ...
     ],
-    "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
-    "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", 
             "citations": ['msmarco_v2.1_doc_16_1041913392#3_1268938142', 'msmarco_v2.1_doc_12_201312571#1_394396180', 'msmarco_v2.1_doc_16_339852969#2_601767683']}, 
@@ -419,11 +415,10 @@ Format 1:
 - team_id (string) containing your team tag
 - run_id (string) containing your run tag
 - type (string) run type, manual or automatic
-- narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
+- narrative_id (string) from the id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - prompt (string, optional) contianing the detailed prompt used for response generation.
-- response_length (integer) containing the total words present in the overall RAG response.
+- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
 ```python
@@ -432,9 +427,10 @@ Format 1:
         "team_id": "my-awesome-team",
         "run_id": "my-awesome-run",
         "type": "automatic",
+        "narrative_id": 1, # id
+        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
+        "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
     },
-    "narrative_id": 1, # id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
@@ -458,8 +454,6 @@ Format 1:
         'msmarco_v2.1_doc_24_1132995963#0_2408027424',
         ...
     ],
-    "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
-    "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", "citations": [0, 8, 15]}, 
             {"text": "Technological innovations like the steam engine, telegraph, spinning jenny, and power loom dramatically increased productivity and reshaped industries.", "citations": [8, 16]}, 
@@ -477,11 +471,10 @@ Format 2 (similar to other tracks):
 - team_id (string) containing your team tag
 - run_id (string) containing your run tag
 - type (string) run type, manual or automatic
-- narrative_id (string) from the narrative_id taken from `trec_rag_2025_queries.jsonl`
+- narrative_id (string) from the id taken from `trec_rag_2025_queries.jsonl`
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
-- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - prompt (string, optional) contianing the detailed prompt used for response generation.
-- response_length (integer) containing the total words present in the overall RAG response.
+- references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
 - answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
 
 ```python
@@ -490,9 +483,10 @@ Format 2 (similar to other tracks):
         "team_id": "my-awesome-team",
         "run_id": "my-awesome-run",
         "type": "automatic",
+        "narrative_id": 1, # id
+        "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
+        "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
     },
-    "narrative_id": 1, # id
-    "narrative": "I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.", # text query
     "references": [ # top-k segments returned used from the retrieval step. We have k equals to 100 segments for this example.
         'msmarco_v2.1_doc_16_1041913392#3_1268938142',
         'msmarco_v2.1_doc_14_1198634226#9_2470404444',
@@ -516,8 +510,6 @@ Format 2 (similar to other tracks):
         'msmarco_v2.1_doc_24_1132995963#0_2408027424',
         ...
     ],
-    "prompt": "Based on trusted sources, provide a factual and comprehensive answer to the following narrative: I'm trying to understand how the Industrial Revolution began, what caused it, and how it changed societies, economies, and populations in different countries. I'm also interested in the roles of key figures like Henry Ford, the impact of technological advancements, and how industrialization connects to topics like urbanization, migration, and modern innovations such as robotics and extended reality.",
-    "response_length": 145, 
     "answer": [ # RAG answer broken into sentences with each answer sentence grounding information from the index mentioned in references.
             {"text": "The Industrial Revolution began in Britain in the mid-18th century, fueled by its abundant coal and iron resources, a large labor force, and access to capital and global trade networks.", 
             "citations": ['msmarco_v2.1_doc_16_1041913392#3_1268938142', 'msmarco_v2.1_doc_12_201312571#1_394396180', 'msmarco_v2.1_doc_16_339852969#2_601767683']}, 
@@ -536,6 +528,8 @@ Format 2 (similar to other tracks):
         ]
 }
 ```
+
+You can find baseline end-to-end RAG systems for the development sets leveraging Anserini, RankLLM, and Ragnarök [here](https://github.com/castorini/ragnarok/blob/main/docs/rag25.md)!
 
 ## Next Steps
 
