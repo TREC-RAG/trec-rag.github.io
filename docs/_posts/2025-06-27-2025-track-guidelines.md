@@ -11,7 +11,7 @@ classes: wide
 toc: false
 ---
 
-> Version 1.0. Last Updated: July 23, 2025
+> Version 2.0. Last Updated: July 28, 2025
 
 Participating teams will receive both the MS MARCO V2.1 document & segment collection and a list of topic descriptions.
 For each topic, participants have the choice to participate in either all or any of three tasks following last year's format. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description (containing upto a maximum of 400 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
@@ -110,6 +110,29 @@ Participants should provide their output in the standard TREC format containing 
 1 Q0 msmarco_v2.1_doc_24_1132995963#0_2408027424 20 0.587181 my-run
 ...
 ```
+
+## Relevance Judgment Subtask
+We are introducing an experimental subtask beginning this year. As part of this subtask, participants will have the opportunity to submit their own QREL (relevance judgment) files. To ensure meaningful overlap among submissions, the assessment pool will consist of the top-k=`20` scored documents from the baseline runs available [here](https://github.com/castorini/ragnarok_data/tree/main/rag25/retrieve_results/MISC).
+
+Please note that this is an experimental initiative. While we welcome and encourage participation, we do not guarantee that the submitted relevance judgments will be used in the official evaluations.
+
+
+### Output Format
+Participants should provide their output in the standard TREC format containing MS MARCO v2.1 segments as TSV: <`r_output_trec_rag_2025.tsv`> for each individual topic. Each line of this file contains six whitespace-separated entries:
+- Topic ID (topic identifier taken from `trec_rag_2025_queries.jsonl`)
+- The fixed string “Q0”
+- Segment ID (from the docid field in `msmarco_v2.1_doc_segmented_XX.json.gz`)
+- Judgment (relevance label for the Segment)
+
+
+```bash
+...
+1 Q0 msmarco_v2.1_doc_16_1041913392#3_1268938142 3
+1 Q0 msmarco_v2.1_doc_12_201312571#0_394394285 2
+1 Q0 msmarco_v2.1_doc_14_1198634226#9_2470404444 3
+...
+```
+
 
 ## Augmented Generation Task (AG)
 
