@@ -224,7 +224,7 @@ Format 1:
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - prompt (string, optional) contianing the detailed prompt used for response generation.
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
+- answer (array) containing the list of sentences (such that the total response length is less than 400 words) and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
 ```python
 {
@@ -280,7 +280,7 @@ Format 2 (similar to other tracks):
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - prompt (string, optional) contianing the detailed prompt used for response generation.
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
+- answer (array) containing the list of sentences (such that the total response length is less than 400 words) and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
 
 ```python
 {
@@ -419,7 +419,7 @@ Format 1:
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - prompt (string, optional) contianing the detailed prompt used for response generation.
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
+- answer (array) containing the list of sentences (such that the total response length is less than 400 words) and citations from the `references` list. The `text` field contains the response and `citations` field contains the (zero-indexed) reference of the segment from the `references` list (sorted from highest to lowest citation support).
 
 ```python
 {
@@ -475,7 +475,7 @@ Format 2 (similar to other tracks):
 - narrative (string) the 2-3 sentence long description of the topic taken from `trec_rag_2025_queries.jsonl`
 - prompt (string, optional) contianing the detailed prompt used for response generation.
 - references (array) containing the ranked list of top-k segment IDs from the retrieval stage (a maximum of only 100 segments is allowed)
-- answer (array) containing the list of sentences and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
+- answer (array) containing the list of sentences (such that the total response length is less than 400 words) and citations from the `references` list. The `text` field contains the response and `citations` field contains the ID of the segment (sorted from highest to lowest citation support).
 
 ```python
 {
