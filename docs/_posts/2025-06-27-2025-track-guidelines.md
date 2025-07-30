@@ -213,7 +213,7 @@ Providing the url, title, headings, segment, start_char, and end_char fields for
 
 ### Output Format (AG Output)
 
-Participants should provide their output in the standard JSONL format containing the following JSON information as <`ag_output_trec_rag_2025.jsonl`> for each individual topic. The final RAG answer should provided in the following JSON format. Each line of this JSONL file contains the following gentries:
+Participants should provide their output in the standard JSONL format containing the following JSON information as <`ag_output_trec_rag_2025.jsonl`> for each individual topic. The final RAG answer should provided in the following JSON format. Each line of this JSONL file contains the following entries:
 
 Format 1:
 
