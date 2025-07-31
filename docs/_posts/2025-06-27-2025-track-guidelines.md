@@ -123,13 +123,15 @@ Participants should provide their output in the standard TREC format containing 
 - The fixed string “Q0”
 - Segment ID (from the docid field in `msmarco_v2.1_doc_segmented_XX.json.gz`)
 - Judgment (relevance label for the Segment)
+- Confidence score (integer or float for the generated label. Assign all 1 if not applicable.)
+- Run ID (where you mention the ID of the run you are submitting)
 
 
 ```bash
 ...
-1 Q0 msmarco_v2.1_doc_16_1041913392#3_1268938142 3
-1 Q0 msmarco_v2.1_doc_12_201312571#0_394394285 2
-1 Q0 msmarco_v2.1_doc_14_1198634226#9_2470404444 3
+1 Q0 msmarco_v2.1_doc_16_1041913392#3_1268938142 3 1 my-qrel
+1 Q0 msmarco_v2.1_doc_12_201312571#0_394394285 2 1 my-qrel
+1 Q0 msmarco_v2.1_doc_14_1198634226#9_2470404444 3 1 my-qrel
 ...
 ```
 
