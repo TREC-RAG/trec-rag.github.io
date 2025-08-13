@@ -111,13 +111,13 @@ Participants should provide their output in the standard TREC format containing 
 ...
 ```
 
-### Relevance Judgment Subtask
+## Relevance Judgment Subtask
 We are introducing an experimental subtask beginning this year. As part of this subtask, participants will have the opportunity to submit their own QREL (relevance judgment) files. To ensure meaningful overlap among submissions, the assessment pool should consist of the top-k=`20` scored documents from the baseline runs available [here](https://github.com/castorini/ragnarok_data/tree/main/rag25/retrieve_results/MISC).
 
 Please note that this is an experimental subtask. While we welcome and encourage participation, we do not guarantee that the submitted relevance judgments will be used in the official evaluations.
 
 
-#### Output Format
+### Output Format
 Participants should provide their output in the standard TREC format containing MS MARCO v2.1 segments as TSV: <`r_output_trec_rag_2025.tsv`> for each individual topic. Each line of this file contains six whitespace-separated entries:
 - Topic ID (topic identifier taken from `trec_rag_2025_queries.jsonl`)
 - The fixed string “Q0”
