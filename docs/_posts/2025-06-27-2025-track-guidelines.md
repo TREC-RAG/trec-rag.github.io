@@ -11,7 +11,7 @@ classes: wide
 toc: false
 ---
 
-> Version 2.0. Last Updated: July 28, 2025
+> Version 2.0. Last Updated: Aug 13, 2025
 
 Participating teams will receive both the MS MARCO V2.1 document & segment collection and a list of topic descriptions.
 For each topic, participants have the choice to participate in either all or any of three tasks following last year's format. For the Retrieval Track (R), participating systems would provide a ranked list of segment IDs retrieved from the MS MARCO V2.1 segment collection. Next, for tracks with Augmented Generation (AG & RAG), participating systems would generate an answer description (containing upto a maximum of 400 words) broken into individual sentences with citations from the MS MARCO V2.1 segment collection.
