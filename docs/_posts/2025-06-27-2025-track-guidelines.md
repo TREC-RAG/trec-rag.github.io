@@ -111,7 +111,7 @@ Participants should provide their output in the standard TREC format containing 
 ...
 ```
 
-## Relevance Judgment Subtask
+## Relevance Judgment
 We are introducing an experimental subtask beginning this year. As part of this subtask, participants will have the opportunity to submit their own QREL (relevance judgment) files. To ensure meaningful overlap among submissions, the assessment pool should consist of the top-k=`20` scored documents from the baseline runs available [here](https://github.com/castorini/ragnarok_data/tree/main/rag25/retrieve_results/MISC).
 
 Please note that this is an experimental subtask. While we welcome and encourage participation, we do not guarantee that the submitted relevance judgments will be used in the official evaluations.
