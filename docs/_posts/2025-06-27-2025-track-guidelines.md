@@ -135,6 +135,15 @@ Participants should provide their output in the standard TREC format containing 
 ...
 ```
 
+Here is the tentative guidelines we will be using for the relevance assessments:
+```bash
+0 - Not relevant
+1 - maybe related to the narrative, but doesn't answer any part of the narrative
+2 - answers 1 part of the narrative
+3 - answers 2-3 parts of the narrative
+4 - answers 4+ parts of the narrative
+```
+
 
 ## Augmented Generation Task (AG)
 
