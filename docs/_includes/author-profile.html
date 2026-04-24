@@ -1,5 +1,15 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
+{% assign has_mailing_list_link = false %}
+{% if author.links %}
+  {% for link in author.links %}
+    {% assign normalized_label = link.label | downcase %}
+    {% if normalized_label contains 'mailing list' %}
+      {% assign has_mailing_list_link = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
@@ -47,7 +57,7 @@
         </li>
       {% endif %}
 
-      {% if author.email %}
+      {% if author.email and has_mailing_list_link == false %}
         <li>
           <a href="mailto:{{ author.email }}" rel="me" class="u-email">
             <meta itemprop="email" content="{{ author.email }}" />

@@ -109,11 +109,8 @@ author:
   avatar           : "/assets/images/rag_icon.png"
   bio              : "Retrieval-Augmented Generation"
   location         : # "Somewhere"
-  email            : "trec-RAG-organizers@googlegroups.com"
+  email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      #url: "mailto:trec-rag-organizers@googlegroups.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -131,7 +128,10 @@ author:
       url: "https://huggingface.co/TREC-RAG"
     - label: "Discord"
       icon: "fab fa-fw fa-discord"
-      url: "https://discord.gg/2JpTEZyG7c"
+      url: "https://discord.gg/m6qMuhuux"
+    - label: "Mailing List"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "https://groups.google.com/g/trec-rag-2026-participants"
 
 # Site Footer
 footer:
@@ -139,24 +139,21 @@ footer:
     - label: "Dataset"
       icon: "fas fa-fw fa-database"
       url: "https://huggingface.co/TREC-RAG"
+    - label: "Mailing List"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "https://groups.google.com/g/trec-rag-2026-participants"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/TREC_RAG"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/TREC-RAG"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:trec-RAG-organizers@googlegroups.com"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-    - label: "Discord"
-      icon: "fab fa-fw fa-discord"
-      url: "https://discord.gg/2JpTEZyG7c"
 
 
 # Reading Files

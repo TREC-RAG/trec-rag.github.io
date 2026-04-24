@@ -8,6 +8,8 @@ main:
     url: /tags/
     #- title: "Sitemap"
     #  url: /sitemap/
+  - title: "TREC 2025"
+    url: /trec25/
   - title: "TREC 2024"
     url: /trec24/
 
@@ -55,4 +57,3 @@ docs:
         url: /docs/stylesheets/
       - title: "JavaScript"
         url: /docs/javascript/
-
