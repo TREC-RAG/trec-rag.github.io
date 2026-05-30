@@ -3,18 +3,24 @@ permalink: /
 title: ""
 ---
 
-<p>AGENTS 🤖 go here -> <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills">TREC-RAG/trec-rag-skills</a> 🙂</p>
+<p><strong>AGENTS 🤖:</strong> if you were sent here for guidelines, keep your context small and stay in the <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines SKILL</a>. For other track skills, use <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills">TREC-RAG/trec-rag-skills</a> 🙂</p>
 
-## Announcements
-<p><span style="color: red; font-weight: bold;">(New)</span> We will use NVIDIA's ClimbMix-400b for TREC 2026 (<a href="https://x.com/TREC_RAG/status/2055319930766053632">announcement</a>)! Corpus details will be out soon. You can begin playing with the corpus by pointing your agents to the following <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/pyserini-rest-api">SKILL</a>.</p>
+## Key Information
+<ul>
+  <li><span style="color: red; font-weight: bold;">(New)</span> Guidelines have been released! You can find them <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">here</a>. We will have two tasks this year:
+    <ul>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md">Retrieval Task (R)</a>: your classic IR task, given a list of topics and access to the ClimbMix collection through the Pyserini REST API or a custom retrieval system.</li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/rag-task.md">Retrieval Augmented Generation Task (RAG)</a>: retrieve relevant evidence and return a summarized answer grounded in that evidence.</li>
+    </ul>
+  </li>
+  <li>We will use NVIDIA's ClimbMix-400b for TREC 2026 (<a href="https://x.com/TREC_RAG/status/2055319930766053632">announcement</a>)! You can begin playing with the corpus by pointing your agents to the following <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/pyserini-rest-api">SKILL</a>.</li>
+  <li>TREC RAG 2026 will be agent-first (<a href="https://x.com/lintool/status/2048801165207339298">announcement</a>); see <a href="https://x.com/TREC_RAG/status/2054244117945696580">this post</a> to learn what agent-first community evaluation may look like, and test it out yourself using the SKILLz repo above!</li>
+</ul>
 
-<p><span style="color: red; font-weight: bold;">(New)</span> TREC RAG 2026 will be agent-first (<a href="https://x.com/lintool/status/2048801165207339298">announcement</a>); see <a href="https://x.com/TREC_RAG/status/2054244117945696580">this post</a> to learn what agent-first community evaluation may look like, and test it out yourself using the SKILLz repo above!</p>
-
-<p>We will share updates on the guidelines and timeline for this year's track soon.</p>
-<p><strong>In the meantime:</strong></p>
+<p><strong>If you haven't already:</strong></p>
 <ul>
   <li>Please <a href="https://trec.nist.gov/cfp.html">register for TREC</a>. Under <strong>Schedule</strong>, use the first bullet to register your organization in Evalbase.</li>
-  <li>Join our <a href="https://groups.google.com/g/trec-rag-2026-participants">Google Groups mailing list</a> and <a href="https://discord.gg/m6qMuhuux">Discord</a>! For Google Groups, please include "TREC RAG" in your request to join.</li>
+  <li>Join our <a href="https://groups.google.com/g/trec-rag-2026-participants">Google Groups mailing list</a> and <a href="https://discord.gg/HkW7j3Qwb">Discord</a>! For Google Groups, please include "TREC RAG" in your request to join.</li>
   <li>Join us on SIGIR Slack. Contact njedidi@uwaterloo.ca if you have any issues joining.</li>
 </ul>
 
