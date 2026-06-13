@@ -7,7 +7,15 @@ title: ""
 
 ## Key Information
 <ul>
-  <li><span style="color: red; font-weight: bold;">(New)</span> Guidelines have been released! You can find them <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">here</a>. We will have two tasks this year:
+  <li><span style="color: red; font-weight: bold;">(New)</span> Development queries for RAG 2026 are out! You can begin testing your systems before the official evaluation topics are released in early July. The development data are available in the <a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data">TREC RAG data repository</a> (<a href="https://x.com/TREC_RAG/status/2065484729747448042">announcement</a>):
+    <ul>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data/topics">Development topics</a>: RAG25 and ResearchRubrics TSV files.</li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/blob/main/trec-rag-2026/development-data/rag25-dev-nuggets/rag25-dev-nuggets.jsonl">RAG25 nuggets</a>: Answer nuggets for RAG25 narratives.</li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data/rag25-dev-umbrela-qrels">RAG25 UMBRELA qrels</a>: UMBRELA relevance judgements generated using multiple LLM judge models.</li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/blob/main/trec-rag-2026/development-data/researchrubrics-dev-rubrics/research-rubrics-dev-rubrics.jsonl">ResearchRubrics evaluation rubrics</a>: Rubrics for the ResearchRubrics prompts.</li>
+    </ul>
+  </li>
+  <li>Guidelines have been released! You can find guidelines <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">here</a>. We will have two tasks this year:
     <ul>
       <li><a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md">Retrieval Task (R)</a>: your classic IR task, given a list of topics and access to the ClimbMix collection through the Pyserini REST API or a custom retrieval system.</li>
       <li><a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/rag-task.md">Retrieval Augmented Generation Task (RAG)</a>: retrieve relevant evidence and return a summarized answer grounded in that evidence.</li>
@@ -31,10 +39,9 @@ The [(TREC)](https://trec.nist.gov/) **R**etrieval-**A**ugmented **G**eneration 
 The TREC RAG Track aims to bring the research community together around a unified benchmark to evaluate the end-to-end performance of systems that combine retrieval and generation. By structuring participation through distinct but complementary tasks, the track enabled deeper analysis of individual system components and their interactions.
 
 ## Timeline
-- Corpus Details: Soon!
-- Test topics released: TBD
+- Test topics released: July 6th
 - Baselines released: TBD
-- Submission deadline: TBD
+- Submission deadline: Early August
 - Results and judgments returned to participants: TBD
 - TREC 2026 Conference: November 2026
 
