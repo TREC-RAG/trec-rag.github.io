@@ -7,7 +7,7 @@ title: ""
 
 ## Key Information
 <ul>
-  <li><span style="color: red; font-weight: bold;">(New)</span> Development queries for RAG 2026 are out! You can begin testing your systems before the official evaluation topics are released in early July. The development data are available in the <a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data">TREC RAG data repository</a> (<a href="https://x.com/TREC_RAG/status/2065484729747448042">announcement</a>). More details can be found in <a href="https://github.com/TREC-RAG/trec-rag-skills/blob/development-topics/skills/trec-rag-2026-track-guidelines/references/development-data.md">references/development-data.md</a> in the <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines skill</a>:
+  <li><span style="color: red; font-weight: bold;">(New)</span> Development queries for RAG 2026 are out! You can begin testing your systems before the official evaluation topics are released in early July. The development data are available in the <a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data">TREC RAG data repository</a> (<a href="https://x.com/TREC_RAG/status/2065484729747448042">announcement</a>). More details can be found in <a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/development-data.md">references/development-data.md</a> in the <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines skill</a>:
     <ul>
       <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data/topics">Development topics</a>: RAG25 and ResearchRubrics TSV files.</li>
       <li><a href="https://github.com/TREC-RAG/trec-rag-data/blob/main/trec-rag-2026/development-data/rag25-dev-nuggets/rag25-dev-nuggets.jsonl">RAG25 nuggets</a>: Answer nuggets for RAG25 narratives.</li>
@@ -48,6 +48,7 @@ The TREC RAG Track aims to bring the research community together around a unifie
 ## Organizers of TREC 2026 RAG Track
 - Nour Jedidi, University of Waterloo
 - Lingwei Gu, University of Waterloo
+- Pouya Sadeghi, University of Waterloo
 - Daniel Campos, Zipf AI
 - Nandan Thakur, University of Waterloo
 - Nick Craswell, Microsoft
