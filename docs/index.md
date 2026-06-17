@@ -40,8 +40,8 @@ The TREC RAG Track aims to bring the research community together around a unifie
 
 ## Timeline
 - Test topics released: July 6th
-- Baselines released: TBD
-- Submission deadline: Early August
+- Baselines released: soon after July 6th
+- Submission deadline: August 7th
 - Results and judgments returned to participants: TBD
 - TREC 2026 Conference: November 2026
 
