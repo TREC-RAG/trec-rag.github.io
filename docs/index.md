@@ -7,15 +7,9 @@ title: ""
 
 ## Key Information
 <ul>
-  <li><span style="color: red; font-weight: bold;">(New)</span> Development queries for RAG 2026 are out! You can begin testing your systems before the official evaluation topics are released in early July. The development data are available in the <a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data">TREC RAG data repository</a> (<a href="https://x.com/TREC_RAG/status/2065484729747448042">announcement</a>). More details can be found in <a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/development-data.md">references/development-data.md</a> in the <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines skill</a>:
-    <ul>
-      <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data/topics">Development topics</a>: RAG25 and ResearchRubrics TSV files.</li>
-      <li><a href="https://github.com/TREC-RAG/trec-rag-data/blob/main/trec-rag-2026/development-data/rag25-dev-nuggets/rag25-dev-nuggets.jsonl">RAG25 nuggets</a>: Answer nuggets for RAG25 narratives.</li>
-      <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data/rag25-dev-umbrela-qrels">RAG25 UMBRELA qrels</a>: ClimbMix-400b UMBRELA relevance judgements generated using multiple LLM judge models.</li>
-      <li><a href="https://github.com/TREC-RAG/trec-rag-data/blob/main/trec-rag-2026/development-data/researchrubrics-dev-rubrics/research-rubrics-dev-rubrics.jsonl">ResearchRubrics evaluation rubrics</a>: Rubrics for the ResearchRubrics prompts.</li>
-    </ul>
-  </li>
-  <li>Guidelines have been released! You can find guidelines <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">here</a>. We will have two tasks this year:
+  <li><span style="color: red; font-weight: bold;">(New)</span> Official TREC RAG 2026 test topics are available <a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/test-data">here</a>.</li>
+  <li><span style="color: red; font-weight: bold;">(New)</span> We’re excited to release <a href="https://github.com/castorini/RAGDoll">RAGDoll</a> 🐈, a toolkit that lets you run the full RAG evaluation workflow end to end — from generating evaluation artifacts to scoring LLM responses! Try it out to evaluate your TREC RAG responses!</li>
+  <li>Guidelines are available <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">here</a>. We will have two tasks this year:
     <ul>
       <li><a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md">Retrieval Task (R)</a>: your classic IR task, given a list of topics and access to the ClimbMix collection through the Pyserini REST API or a custom retrieval system.</li>
       <li><a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/rag-task.md">Retrieval Augmented Generation Task (RAG)</a>: retrieve relevant evidence and return a summarized answer grounded in that evidence.</li>
@@ -55,6 +49,21 @@ The TREC RAG Track aims to bring the research community together around a unifie
 - Ronak Pradeep, University of Waterloo
 - Shivani Upadhyay, University of Waterloo
 - Jimmy Lin, University of Waterloo
+
+## Available Data and Tools
+
+<ul>
+  <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/test-data">Official TREC RAG 2026 test data</a>: Test topics for the 2026 track.</li>
+  <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data">TREC RAG 2026 development data</a>: Practice topics and supporting resources for system testing. More details are available in <a href="https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/development-data.md">references/development-data.md</a> in the <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines skill</a>:
+    <ul>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data/topics">Development topics</a>: RAG25 and ResearchRubrics TSV files.</li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/blob/main/trec-rag-2026/development-data/rag25-dev-nuggets/rag25-dev-nuggets.jsonl">RAG25 nuggets</a>: Answer nuggets for RAG25 narratives.</li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data/rag25-dev-umbrela-qrels">RAG25 UMBRELA qrels</a>: ClimbMix-400b UMBRELA relevance judgements generated using multiple LLM judge models.</li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data/blob/main/trec-rag-2026/development-data/researchrubrics-dev-rubrics/research-rubrics-dev-rubrics.jsonl">ResearchRubrics evaluation rubrics</a>: Rubrics for the ResearchRubrics prompts.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/castorini/RAGDoll">RAGDoll</a>: Automated end-to-end framework for evaluating TREC RAG systems, from gold-standard construction to scoring long-form answers.</li>
+</ul>
 
 ## Previous Iterations of TREC RAG
 
