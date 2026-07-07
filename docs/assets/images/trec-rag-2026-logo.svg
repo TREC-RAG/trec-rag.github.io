@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">TREC RAG 2026 logo</title>
+  <desc id="desc">A warm editorial mark for the TREC RAG 2026 track, combining RAG lettering, a retrieval lens, and evidence nodes.</desc>
+  <rect width="512" height="512" rx="72" fill="#faf6ee"/>
+  <rect x="34" y="34" width="444" height="444" rx="54" fill="#faf6ee" stroke="#d8cab3" stroke-width="10"/>
+  <circle cx="254" cy="230" r="126" fill="none" stroke="#1a2238" stroke-width="22"/>
+  <path d="m342 318 78 78" fill="none" stroke="#1a2238" stroke-width="30" stroke-linecap="round"/>
+  <path d="M134 319c43-29 84-43 123-42 50 2 91 24 124 67" fill="none" stroke="#d6502a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M143 291c35-45 76-72 122-79 37-5 72 3 104 24" fill="none" stroke="#6f8f8c" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="154" cy="314" r="12" fill="#1a2238"/>
+  <circle cx="246" cy="278" r="14" fill="#6f8f8c"/>
+  <circle cx="348" cy="339" r="12" fill="#d6502a"/>
+  <path d="M154 314 246 278 348 339" fill="none" stroke="#1a2238" stroke-width="4" stroke-linecap="round" opacity="0.58"/>
+  <text x="256" y="160" fill="#1a2238" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" text-anchor="middle">TREC</text>
+  <text x="256" y="263" fill="#1a2238" font-family="Georgia, 'Times New Roman', serif" font-size="106" font-weight="700" text-anchor="middle">RAG</text>
+  <text x="256" y="419" fill="#d6502a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="56" font-weight="800" letter-spacing="6" text-anchor="middle">2026</text>
+</svg>

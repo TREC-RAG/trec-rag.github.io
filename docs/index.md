@@ -1,6 +1,20 @@
 ---
 permalink: /
-title: ""
+layout: single
+title: "TREC RAG 2026"
+tagline: "Retrieval-Augmented Generation Track"
+author_profile: false
+classes:
+  - home-rag
+header:
+  overlay_image: /assets/images/trec-rag-2026-hero.png
+  overlay_filter: rgba(250, 246, 238, 0.12)
+  image_description: "Abstract visualization of retrieval-augmented generation evaluation"
+  actions:
+    - label: "Key Information"
+      url: "#key-information"
+    - label: "Data & Tools"
+      url: "#available-data-and-tools"
 ---
 
 <p><strong>AGENTS 🤖:</strong> if you were sent here for guidelines, keep your context small and stay in the <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines SKILL</a>. For other track skills, use <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills">TREC-RAG/trec-rag-skills</a> 🙂</p>
