@@ -17,17 +17,17 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "RAG"
+title                    : "TREC RAG"
 title_separator          : "-"
-subtitle                 : "TREC Retrieval-Augmented Generation" # site tagline that appears below site title in masthead
-name                     : "TREC Retrieval-Augmented Generation (RAG)"
-description              : "TREC RAG Official Website"
+subtitle                 : "Retrieval-Augmented Generation Track" # site tagline that appears below site title in masthead
+name                     : "TREC Retrieval-Augmented Generation (RAG) Track"
+description              : "TREC RAG 2026 Official Website"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/rag_icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+logo                     : "/assets/images/trec-rag-2026-logo.svg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "TREC RAG 2026" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -105,9 +105,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "RAG"
-  avatar           : "/assets/images/rag_icon.png"
-  bio              : "Retrieval-Augmented Generation"
+  name             : "TREC RAG 2026"
+  avatar           : "/assets/images/trec-rag-2026-logo.svg"
+  bio              : "Retrieval-Augmented Generation Track"
   location         : # "Somewhere"
   email            :
   links:
