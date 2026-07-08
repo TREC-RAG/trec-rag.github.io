@@ -10,10 +10,10 @@ hero:
     label: "Register for TREC"
     url: "https://trec.nist.gov/cfp.html"
   secondary:
+    - label: "Test topics"
+      url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/test-data"
     - label: "Track guidelines"
       url: "https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines"
-    - label: "Join Discord"
-      url: "https://discord.gg/HkW7j3Qwb"
 
 # Compact key-date chips under the hero
 dates:
