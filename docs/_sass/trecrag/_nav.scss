@@ -1,0 +1,142 @@
+/* ==========================================================================
+   TREC RAG masthead / navigation
+   ========================================================================== */
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  animation: none;
+  transition: box-shadow 0.2s var(--ease), background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.masthead.is-scrolled {
+  box-shadow: var(--shadow-sm);
+  border-bottom-color: var(--border);
+}
+
+.masthead__inner-wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  font-family: var(--font-sans);
+}
+
+.greedy-nav {
+  background: transparent;
+  min-height: var(--nav-h);
+  align-items: center;
+
+  .site-logo {
+    color: var(--brand);
+    display: inline-flex;
+    align-items: center;
+  }
+  .site-logo .trec-mark {
+    width: 2.05rem;
+    height: 2.05rem;
+    display: block;
+  }
+
+  .site-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    padding: 0.25rem 0;
+    gap: 0.5rem;
+  }
+
+  .site-subtitle {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  a {
+    color: var(--text);
+  }
+
+  .visible-links a {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0 0.8rem;
+
+    &:before {
+      height: 3px;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+    &:hover { color: var(--brand); }
+  }
+
+  .hidden-links {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    padding: 0.35rem;
+
+    a {
+      color: var(--text);
+      border-radius: 6px;
+      &:hover { background: var(--surface-2); color: var(--brand); }
+    }
+    &:before { border-bottom-color: var(--border); }
+    &:after  { border-bottom-color: var(--surface-1); }
+  }
+
+  .greedy-nav__toggle .navicon,
+  .greedy-nav__toggle .navicon:before,
+  .greedy-nav__toggle .navicon:after {
+    background: var(--text);
+  }
+}
+
+/* Dark-mode toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: 0.35rem;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface-1);
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.15s var(--ease), border-color 0.15s var(--ease), background 0.15s var(--ease), transform 0.12s var(--ease);
+
+  &:hover {
+    color: var(--brand);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+  }
+  &:focus-visible { outline: none; box-shadow: var(--ring); }
+
+  svg { width: 1.15rem; height: 1.15rem; display: block; }
+  .theme-toggle__sun { display: none; }
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  .theme-toggle__sun { display: block; }
+  .theme-toggle__moon { display: none; }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle {
+    .theme-toggle__sun { display: block; }
+    .theme-toggle__moon { display: none; }
+  }
+}

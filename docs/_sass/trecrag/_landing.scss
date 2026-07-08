@@ -1,0 +1,295 @@
+/* ==========================================================================
+   TREC RAG landing page
+   ========================================================================== */
+
+.landing { overflow-x: clip; }
+
+/* ---- Hero -------------------------------------------------------------- */
+.trec-hero {
+  position: relative;
+  background: var(--band-bg);
+  color: var(--band-ink);
+  overflow: hidden;
+  border-bottom: 1px solid var(--band-border);
+}
+.trec-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(139, 185, 185, 0.16) 1px, transparent 0);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 70% 20%, #000 0%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 70% at 70% 20%, #000 0%, transparent 75%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.trec-hero::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 46rem;
+  height: 46rem;
+  background: radial-gradient(circle, rgba(139, 185, 185, 0.18) 0%, transparent 62%);
+  pointer-events: none;
+}
+
+.trec-hero__inner {
+  position: relative;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 6rem) 1.5rem clamp(3rem, 6vw, 4.5rem);
+}
+
+.trec-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--band-ink);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--band-border);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.5rem;
+}
+.trec-hero__eyebrow .dot {
+  width: 0.5rem; height: 0.5rem; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(139, 185, 185, 0.22);
+}
+
+.trec-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--band-ink);
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+.trec-hero h1 .accent { color: var(--accent); }
+
+.trec-hero__lead {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--band-muted);
+  max-width: 60ch;
+  margin: 0 0 2rem;
+}
+
+.trec-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.trec-hero__dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--band-border);
+}
+.trec-hero__date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  .k { font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--band-muted); }
+  .v { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; color: var(--band-ink); }
+  &.is-key .v { color: var(--accent); }
+}
+
+/* ---- Agents strip ------------------------------------------------------ */
+.trec-agents {
+  max-width: var(--maxw);
+  margin: -1.6rem auto 0;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.trec-agents__box {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+.trec-agents__box .ico {
+  flex-shrink: 0;
+  color: var(--brand);
+  margin-top: 1px;
+}
+.trec-agents__box a { font-weight: 500; }
+
+/* ---- Generic grid ------------------------------------------------------ */
+.trec-grid { display: grid; gap: 1.25rem; }
+.trec-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.trec-grid--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.trec-grid--auto { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+@media (max-width: 720px) {
+  .trec-grid--2 { grid-template-columns: 1fr; }
+}
+
+/* ---- News / key info --------------------------------------------------- */
+.trec-news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  h3 { font-size: 1.05rem; margin: 0; color: var(--ink); }
+  p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+  .trec-news-card__head { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+}
+
+/* ---- Tasks ------------------------------------------------------------- */
+.trec-task-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.trec-task-card__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  height: 3rem;
+  padding: 0 0.75rem;
+  border-radius: 12px;
+  background: var(--tag-bg);
+  color: var(--brand);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.trec-task-card h3 { font-size: 1.35rem; margin: 0 0 0.5rem; color: var(--ink); }
+.trec-task-card p { color: var(--muted); line-height: 1.6; margin: 0 0 1.25rem; flex: 1; }
+.trec-task-card__link {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--brand);
+}
+.trec-task-card:hover .trec-task-card__link { gap: 0.6rem; }
+
+/* ---- Timeline ---------------------------------------------------------- */
+.trec-timeline {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 1.75rem;
+  list-style: none;
+  border-left: 2px solid var(--border);
+}
+.trec-timeline li {
+  position: relative;
+  padding: 0 0 1.75rem 0.25rem;
+}
+.trec-timeline li:last-child { padding-bottom: 0; }
+.trec-timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.75rem - 1px);
+  top: 0.35rem;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--surface-0);
+  border: 2px solid var(--accent);
+  transform: translateX(-50%);
+}
+.trec-timeline li.is-key::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(139, 185, 185, 0.2);
+}
+.trec-timeline .k {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 1.02rem;
+}
+.trec-timeline .d { color: var(--muted); font-size: 0.9rem; margin-top: 0.1rem; }
+.trec-timeline li.is-key .k { color: var(--brand); }
+
+/* ---- Tools ------------------------------------------------------------- */
+.trec-tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  .ico {
+    width: 2.5rem; height: 2.5rem;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 10px;
+    background: var(--tag-bg); color: var(--brand);
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+  h3 { margin: 0; font-size: 1.05rem; color: var(--ink); }
+  p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+}
+
+/* ---- Organizers -------------------------------------------------------- */
+.trec-people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+.trec-person {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 0.9rem;
+  transition: border-color 0.15s var(--ease), transform 0.15s var(--ease);
+}
+.trec-person:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+.trec-person__name { font-family: var(--font-display); font-weight: 500; color: var(--ink); font-size: 0.95rem; line-height: 1.2; }
+.trec-person__aff { color: var(--muted); font-size: 0.82rem; margin-top: 0.15rem; }
+
+/* ---- Previous iterations ----------------------------------------------- */
+.trec-prev-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  h3 { margin: 0; font-size: 1.2rem; color: var(--ink); }
+  p { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.9rem; }
+  .arrow { color: var(--brand); font-size: 1.2rem; transition: transform 0.15s var(--ease); }
+}
+.trec-prev-card:hover .arrow { transform: translateX(4px); }
+
+/* ---- Section rhythm on the landing page -------------------------------- */
+.landing .trec-section--alt {
+  background: var(--surface-2);
+  max-width: none;
+  padding-left: 0; padding-right: 0;
+}
+.landing .trec-section--alt > .trec-section__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .trec-hero__dates { gap: 1rem; }
+  .trec-agents__box { flex-direction: column; gap: 0.5rem; }
+}

@@ -1,0 +1,112 @@
+/* ==========================================================================
+   TREC RAG cross-cutting overrides + archive/post polish
+   ========================================================================== */
+
+/* Let theme wrappers inherit the page surface */
+.initial-content,
+.page,
+.archive,
+.page__inner-wrap { background: transparent; }
+
+body { background: var(--surface-0); }
+
+/* Content column width + rhythm on standard pages */
+.page__content { font-size: 1rem; }
+.page__content > p { line-height: 1.7; }
+
+/* Page title on inner (single) pages. The title text is wrapped in an
+   <a class="u-url"> which MM colors statically, so override the anchor too. */
+.page__title,
+.page__title a {
+  font-family: var(--font-display);
+  color: var(--ink);
+  text-shadow: none;
+  letter-spacing: -0.02em;
+}
+.page__title a:hover { color: var(--brand); }
+.page__meta, .page__meta a { color: var(--muted); }
+.page__meta a:hover { color: var(--brand); }
+
+/* Author sidebar (kept minimal where it still appears) */
+.sidebar {
+  .author__name { font-family: var(--font-display); color: var(--ink); }
+  .author__bio { color: var(--muted); }
+}
+.author__avatar img { border: 2px solid var(--border); }
+.author__urls {
+  background: var(--surface-1);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+  a { color: var(--text); }
+  a:hover { color: var(--brand); }
+  &:before { border-color: transparent transparent var(--border) transparent; }
+  &:after { border-color: transparent transparent var(--surface-1) transparent; }
+}
+
+/* Archive listings (announcements / categories / tags) */
+.archive__item-title { font-family: var(--font-display); }
+.archive__item-title a { color: var(--ink); }
+.archive__item-title a:hover { color: var(--brand); }
+.archive__item-excerpt { color: var(--muted); }
+.archive__subtitle { color: var(--ink); border-bottom-color: var(--border); }
+
+.list__item .archive__item-teaser,
+.grid__item .archive__item-teaser { border-radius: var(--radius); border: 1px solid var(--border); }
+
+/* Taxonomy chips */
+.page__taxonomy .page__taxonomy-item {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 0;
+  border-radius: var(--radius-pill);
+  &:hover { background: var(--accent); color: #0e2429; }
+}
+
+/* Pagination */
+.pagination li a {
+  border-color: var(--border);
+  color: var(--text);
+  &:hover { border-color: var(--border-hover); color: var(--brand); }
+}
+.pagination li .current,
+.pagination li .current.disabled {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--on-brand);
+}
+
+/* Breadcrumbs */
+.breadcrumbs a { color: var(--link); }
+.breadcrumbs .current { color: var(--muted); }
+
+/* TOC (right rail on long pages) */
+.toc {
+  border-color: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  .nav__title { background: var(--brand); color: var(--on-brand); font-family: var(--font-display); }
+  .toc__menu a { color: var(--muted); }
+  .toc__menu a:hover { color: var(--brand); }
+  .toc__menu .active a,
+  .nav__items .active a { background: var(--surface-2); color: var(--brand); }
+}
+
+/* White diagram images read softer on dark backgrounds */
+:root[data-theme="dark"] .page__content img[src$=".png"],
+:root[data-theme="dark"] .page__content img[src$=".jpg"] {
+  background: #fff;
+  padding: 4px;
+  border: 1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .page__content img[src$=".png"],
+  :root:not([data-theme="light"]) .page__content img[src$=".jpg"] {
+    background: #fff;
+    padding: 4px;
+    border: 1px solid var(--border);
+  }
+}
+
+/* Skip-link + misc theme chrome */
+.skip-link { background: var(--brand); color: var(--on-brand); }

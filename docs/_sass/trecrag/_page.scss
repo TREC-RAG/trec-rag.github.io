@@ -1,0 +1,89 @@
+/* ==========================================================================
+   TREC RAG inner pages (single + archive)
+   ========================================================================== */
+
+/* Single content pages (trec24, trec25, posts, 404) become a clean, centered
+   reading column now that the floating author sidebar is off. */
+.layout--single .page {
+  float: none;
+  width: auto;
+  max-width: 54rem;
+  margin: 0 auto;
+  padding-right: 0;
+}
+.layout--single .initial-content { padding-top: 1.25rem; }
+
+.page__title {
+  font-size: clamp(2rem, 4.5vw, 2.7rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  margin: 0.25rem 0 0.65rem;
+  border: 0;
+}
+.page__title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+  margin-top: 0.9rem;
+}
+.page__meta { margin: 0 0 1.75rem; }
+
+/* Section headings inside long pages */
+.page__content h3,
+.page__content h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+}
+.page__content h4 { margin-top: 1.6em; }
+
+/* Ordered task lists read like steps */
+.page__content ol > li { margin-bottom: 0.6em; }
+
+/* Figure captions under the evaluation-step images */
+.page__content figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  text-align: center;
+  margin: 0.6rem auto 1.9rem;
+  max-width: 46rem;
+}
+.page__content img.align-center { margin-top: 1.6rem; }
+
+/* Archive / taxonomy pages (announcements, categories, tags) */
+.layout--archive .archive,
+.layout--categories .archive,
+.layout--tags .archive,
+.layout--posts .archive,
+.layout--collection .archive {
+  float: none;
+  width: auto;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-right: 0;
+}
+.layout--archive .initial-content,
+.layout--categories .initial-content,
+.layout--tags .initial-content { padding-top: 1.25rem; }
+
+.archive__item {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-1);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease), border-color 0.15s var(--ease);
+  margin-bottom: 1rem;
+}
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+.archive__item-excerpt { margin-top: 0.35rem; }
+
+/* Post share / navigation buttons pick up the token buttons from _base */
+.page__share, .page__comments { border-top: 1px solid var(--border); }

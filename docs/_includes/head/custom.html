@@ -1,5 +1,34 @@
 <!-- start custom head snippets -->
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- TREC RAG: set theme before paint to avoid a flash of the wrong mode -->
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('trec-js');
+    try {
+      var q = new URLSearchParams(location.search).get('theme');
+      var t = (q === 'dark' || q === 'light') ? q : localStorage.getItem('trec-theme');
+      if (t === 'dark' || t === 'light') {
+        root.setAttribute('data-theme', t);
+        if (q === 'dark' || q === 'light') localStorage.setItem('trec-theme', t);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<!-- Web fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Browser UI color -->
+<meta name="theme-color" content="#f1f3f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e2429" media="(prefers-color-scheme: dark)">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
 
 <!-- end custom head snippets -->

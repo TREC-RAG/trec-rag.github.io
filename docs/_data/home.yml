@@ -1,0 +1,168 @@
+# ==========================================================================
+# TREC RAG landing page content (rendered by _layouts/landing.html).
+# Edit copy/links here; structure/markup lives in the layout + _sass/trecrag.
+# ==========================================================================
+
+hero:
+  eyebrow: "TREC 2026 · Agent-first"
+  lead: "A TREC (NIST) benchmark bringing the research community together to evaluate end-to-end systems that combine retrieval with large language models."
+  primary:
+    label: "Register for TREC"
+    url: "https://trec.nist.gov/cfp.html"
+  secondary:
+    - label: "Track guidelines"
+      url: "https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines"
+    - label: "Join Discord"
+      url: "https://discord.gg/HkW7j3Qwb"
+
+# Compact key-date chips under the hero
+dates:
+  - k: "Test topics"
+    v: "Jul 6"
+  - k: "Baselines"
+    v: "Jul 2026"
+  - k: "Submissions due"
+    v: "Aug 7"
+    key: true
+  - k: "TREC 2026"
+    v: "Nov 2026"
+
+# The AGENTS note (machine-readable pointer), preserved from the old homepage
+agents: >
+  <strong>AGENTS 🤖:</strong> if you were sent here for guidelines, keep your
+  context small and stay in the
+  <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines skill</a>.
+  For other track skills, use
+  <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills">TREC-RAG/trec-rag-skills</a>.
+
+# What's new — key information cards
+news:
+  - new: true
+    title: "2026 test topics released"
+    body: "Official TREC RAG 2026 test topics are now available."
+    url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/test-data"
+    cta: "Get the topics"
+  - new: true
+    title: "RAGDoll evaluation toolkit"
+    body: "Run the full RAG evaluation workflow end to end — from generating evaluation artifacts to scoring LLM responses."
+    url: "https://github.com/castorini/RAGDoll"
+    cta: "Try RAGDoll"
+  - title: "Two tasks this year"
+    body: "2026 simplifies to a Retrieval task and a Retrieval-Augmented Generation task, with guidelines published as agent-ready skills."
+    url: "https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines"
+    cta: "Read the guidelines"
+  - title: "New corpus: NVIDIA ClimbMix-400b"
+    body: "ClimbMix-400b replaces MS MARCO v2.1, accessed through the Pyserini REST API."
+    url: "https://x.com/TREC_RAG/status/2055319930766053632"
+    cta: "Announcement"
+
+# Mission / overview (HTML allowed via block scalars)
+overview:
+  - >
+    The <a href="https://trec.nist.gov/">TREC</a> Retrieval-Augmented Generation
+    Track fosters innovation and research in retrieval-augmented generation systems:
+    combining retrieval methods that find relevant information within large corpora
+    with Large Language Models, to help systems produce relevant, accurate, updated,
+    and contextually appropriate content.
+  - >
+    The track brings the research community together around a unified benchmark to
+    evaluate the end-to-end performance of systems that combine retrieval and
+    generation. Distinct but complementary tasks enable deeper analysis of individual
+    components and their interactions.
+
+# The two 2026 tasks
+tasks:
+  - mark: "R"
+    title: "Retrieval"
+    body: "The classic IR task: given a list of topics and access to the ClimbMix collection — via the Pyserini REST API or your own system — retrieve and rank the most relevant segments."
+    url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md"
+  - mark: "RAG"
+    title: "Retrieval-Augmented Generation"
+    body: "Retrieve relevant evidence and return a summarized answer grounded in that evidence — citing the supporting segments so results stay reproducible."
+    url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/rag-task.md"
+
+# Timeline
+timeline:
+  - k: "Test topics released"
+    d: "July 6, 2026"
+  - k: "Baselines released"
+    d: "Soon after July 6"
+  - k: "Submission deadline"
+    d: "August 7, 2026"
+    key: true
+  - k: "Results & judgments returned"
+    d: "TBD"
+  - k: "TREC 2026 Conference"
+    d: "November 2026"
+
+# Data & tools
+tools:
+  - icon: "fas fa-vial"
+    title: "2026 test data"
+    body: "Official test topics for the 2026 track."
+    url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/test-data"
+  - icon: "fas fa-flask"
+    title: "2026 development data"
+    body: "Practice topics, RAG25 nuggets, UMBRELA qrels, and ResearchRubrics for system testing."
+    url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/development-data"
+  - icon: "fas fa-cat"
+    title: "RAGDoll"
+    body: "Automated end-to-end framework for evaluating TREC RAG systems, from gold-standard construction to scoring long-form answers."
+    url: "https://github.com/castorini/RAGDoll"
+  - icon: "fas fa-database"
+    title: "ClimbMix-400b corpus"
+    body: "NVIDIA's ClimbMix-400b, served through the Pyserini REST API skill."
+    url: "https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/pyserini-rest-api"
+
+# Get involved
+community:
+  - icon: "fas fa-user-plus"
+    title: "Register for TREC"
+    body: "Register your organization in Evalbase under Schedule."
+    url: "https://trec.nist.gov/cfp.html"
+  - icon: "fas fa-envelope-open-text"
+    title: "Mailing list"
+    body: "Join the Google Group; mention TREC RAG in your request."
+    url: "https://groups.google.com/g/trec-rag-2026-participants"
+  - icon: "fab fa-discord"
+    title: "Discord"
+    body: "Chat with organizers and participants in real time."
+    url: "https://discord.gg/HkW7j3Qwb"
+  - icon: "fab fa-slack"
+    title: "SIGIR Slack"
+    body: "Contact njedidi@uwaterloo.ca if you have trouble joining."
+    url: "mailto:njedidi@uwaterloo.ca"
+
+# Organizers (photo used when `img` is set, otherwise initials are derived in the layout)
+organizers:
+  - name: "Nour Jedidi"
+    aff: "University of Waterloo"
+    img: "/assets/images/organizers/nour-jedidi.jpg"
+  - name: "Lingwei Gu"
+    aff: "University of Waterloo"
+  - name: "Pouya Sadeghi"
+    aff: "University of Waterloo"
+    img: "/assets/images/organizers/pouya-sadeghi.jpg"
+  - name: "Daniel Campos"
+    aff: "Zipf AI"
+  - name: "Nandan Thakur"
+    aff: "University of Waterloo"
+  - name: "Nick Craswell"
+    aff: "Microsoft"
+  - name: "Ronak Pradeep"
+    aff: "University of Waterloo"
+    img: "/assets/images/organizers/ronak-pradeep.png"
+  - name: "Shivani Upadhyay"
+    aff: "University of Waterloo"
+  - name: "Jimmy Lin"
+    aff: "University of Waterloo"
+    img: "/assets/images/organizers/jimmy-lin.jpg"
+
+# Previous iterations
+previous:
+  - title: "TREC RAG 2024"
+    body: "The inaugural track: three tasks over MS MARCO v2.1, with UMBRELA relevance judgments."
+    url: "/trec24/"
+  - title: "TREC RAG 2025"
+    body: "Narrative topics, an experimental relevance-judgment subtask, and refined nugget evaluation."
+    url: "/trec25/"

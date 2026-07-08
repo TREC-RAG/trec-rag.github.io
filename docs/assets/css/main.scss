@@ -7,3 +7,14 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+// TREC RAG redesign — deep teal (restrained). Layer B: runtime tokens +
+// custom components, imported after the theme so they win in the cascade.
+@import "trecrag/tokens";
+@import "trecrag/base";
+@import "trecrag/components";
+@import "trecrag/nav";
+@import "trecrag/footer";
+@import "trecrag/landing";
+@import "trecrag/page";
+@import "trecrag/dark";
