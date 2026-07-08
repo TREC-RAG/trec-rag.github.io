@@ -145,6 +145,13 @@ a.trec-card:hover, .trec-card--hover:hover {
 }
 .trec-btn--band-primary:hover { background: #a6cccc; color: #0e2429; }
 
+/* Keep button labels legible when the target URL has been visited:
+   a:visited outranks the variant color rules, so pin it per variant. */
+.trec-btn--primary:visited { color: var(--on-brand); }
+.trec-btn--ghost:visited { color: var(--brand); }
+.trec-btn--on-band:visited { color: var(--band-ink); }
+.trec-btn--band-primary:visited { color: #0e2429; }
+
 /* Inline "arrow" card link */
 .trec-cardlink {
   font-family: var(--font-display);
