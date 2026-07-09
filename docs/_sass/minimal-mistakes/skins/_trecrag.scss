@@ -1,0 +1,59 @@
+/* ==========================================================================
+   TREC RAG skin — deep teal (restrained)
+   --------------------------------------------------------------------------
+   Compile-time overrides for Minimal Mistakes' SCSS variables. Imported by
+   assets/css/main.scss BEFORE `minimal-mistakes`, so these values win over
+   the theme's `!default` declarations. Runtime light/dark theming is layered
+   on top via CSS custom properties in _sass/trecrag/_tokens.scss.
+   ========================================================================== */
+
+/* Typefaces (web fonts loaded in _includes/head/custom.html) */
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Helvetica Neue", Arial, sans-serif !default;
+$monospace: "JetBrains Mono", Monaco, Consolas, "Lucida Console", monospace !default;
+$global-font-family: $sans-serif;
+$header-font-family: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", sans-serif;
+$caption-font-family: $sans-serif;
+
+/* Colors — light-mode baseline (dark mode handled by CSS custom properties) */
+$background-color: #f1f3f2;
+$text-color: #2e4348;
+$muted-text-color: #61716f;
+$primary-color: #284e57;
+$border-color: #d5e0dd;
+$code-background-color: #eef3f1;
+$form-background-color: #ffffff;
+$footer-background-color: #22424b;
+
+$link-color: #285863;
+$link-color-hover: #1e3a42;
+$link-color-visited: #285863;
+$masthead-link-color: #22424b;
+$masthead-link-color-hover: #284e57;
+$navicon-link-color-hover: #8bb9b9;
+
+$success-color: #3f7d5a;
+$warning-color: #b07a2e;
+$danger-color: #b0524e;
+$info-color: #284e57;
+$focus-color: #8bb9b9;
+$active-color: #e8edec;
+
+/* Syntax highlighting — on-brand teal-dark (consistent in both modes) */
+$base00: #10292f;
+$base01: #16333a;
+$base02: #1f4148;
+$base03: #5e7b7e;
+$base04: #86a3a2;
+$base05: #d6e3e0;
+$base06: #e7f0ee;
+$base07: #f1f5f4;
+$base08: #e5989b;
+$base09: #e0a96d;
+$base0a: #d9c37a;
+$base0b: #9cc7a6;
+$base0c: #8bb9b9;
+$base0d: #8fb8c6;
+$base0e: #c0a6d0;
+$base0f: #c98a6a;

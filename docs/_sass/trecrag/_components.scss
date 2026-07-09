@@ -1,0 +1,216 @@
+/* ==========================================================================
+   TREC RAG shared components
+   ========================================================================== */
+
+.trec-section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+.trec-section--tight { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+
+.trec-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin: 0 0 0.75rem;
+
+  &::before {
+    content: "";
+    width: 1.6rem;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+}
+
+.trec-section__head {
+  margin-bottom: 2.25rem;
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+  p {
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.65;
+    max-width: 62ch;
+    margin: 0.75rem 0 0;
+  }
+}
+
+/* Cards */
+.trec-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease), border-color 0.18s var(--ease);
+}
+a.trec-card, .trec-card--link { text-decoration: none; color: inherit; display: block; }
+a.trec-card:hover, .trec-card--hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+/* Tags + badges */
+.trec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid transparent;
+}
+
+.trec-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--brand-strong);
+  vertical-align: middle;
+}
+:root[data-theme="dark"] .trec-badge { color: var(--band-ink); }
+
+/* Buttons */
+.trec-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.12s var(--ease), box-shadow 0.15s var(--ease), background 0.15s var(--ease), border-color 0.15s var(--ease), color 0.15s var(--ease);
+}
+.trec-btn:hover { transform: translateY(-2px); }
+.trec-btn:focus-visible { outline: none; box-shadow: var(--ring); }
+.trec-btn svg { width: 1.05em; height: 1.05em; }
+
+.trec-btn--primary {
+  background: var(--brand);
+  color: var(--on-brand);
+  box-shadow: var(--shadow-sm);
+}
+.trec-btn--primary:hover { background: var(--brand-strong); color: var(--on-brand); box-shadow: var(--shadow-md); }
+
+.trec-btn--ghost {
+  background: var(--surface-1);
+  color: var(--brand);
+  border-color: var(--border);
+}
+.trec-btn--ghost:hover { border-color: var(--border-hover); color: var(--brand-strong); }
+
+/* On dark bands */
+.trec-btn--on-band {
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--band-ink);
+  border-color: var(--band-border);
+}
+.trec-btn--on-band:hover { background: rgba(255, 255, 255, 0.18); border-color: var(--accent); }
+.trec-btn--band-primary {
+  background: var(--accent);
+  color: #0e2429;
+}
+.trec-btn--band-primary:hover { background: #a6cccc; color: #0e2429; }
+
+/* Keep button labels legible when the target URL has been visited:
+   a:visited outranks the variant color rules, so pin it per variant. */
+.trec-btn--primary:visited { color: var(--on-brand); }
+.trec-btn--ghost:visited { color: var(--brand); }
+.trec-btn--on-band:visited { color: var(--band-ink); }
+.trec-btn--band-primary:visited { color: #0e2429; }
+
+/* Inline "arrow" card link */
+.trec-cardlink {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+  text-decoration: none;
+  color: var(--brand);
+}
+.trec-cardlink i { transition: transform 0.15s var(--ease); }
+.trec-card:hover .trec-cardlink i,
+.trec-cardlink:hover i { transform: translateX(3px); }
+
+/* Readable prose column (overview) */
+.trec-prose { max-width: 68ch; }
+.trec-prose p {
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.75;
+  margin: 0 0 1.1rem;
+}
+.trec-prose p:last-child { margin-bottom: 0; }
+.trec-prose a { color: var(--link); text-decoration-color: var(--accent); }
+
+/* Avatar (organizers) */
+.trec-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.trec-avatar--photo { background: var(--surface-2); }
+.trec-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Scroll reveal (hidden only when JS is active, so no-JS still shows content) */
+.reveal {
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  will-change: opacity, transform;
+}
+.trec-js .reveal { opacity: 0; transform: translateY(14px); }
+.trec-js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .trec-js .reveal { opacity: 1; transform: none; transition: none; }
+}

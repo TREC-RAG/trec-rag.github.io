@@ -1,0 +1,188 @@
+/* ==========================================================================
+   TREC RAG base overrides
+   --------------------------------------------------------------------------
+   Re-maps the high-traffic Minimal Mistakes elements onto design tokens so
+   content pages (home, year pages, posts, archives) render correctly in both
+   light and dark. Imported after the theme, so these win in the cascade.
+   ========================================================================== */
+
+html {
+  background-color: var(--surface-0);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--surface-0);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+::selection {
+  background: var(--accent);
+  color: #0e2429;
+}
+
+/* Anchor offset so sticky nav doesn't cover headings */
+:target,
+h1[id], h2[id], h3[id], h4[id] {
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
+}
+
+/* Links */
+a {
+  color: var(--link);
+  transition: color 0.15s var(--ease);
+}
+a:hover { color: var(--link-hover); }
+
+.page__content a {
+  color: var(--link);
+  text-decoration-color: var(--accent);
+  text-underline-offset: 2px;
+}
+.page__content a:hover { color: var(--link-hover); }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.page__content {
+  h1, h2 { letter-spacing: -0.02em; }
+  h2 {
+    margin-top: 2.4em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 { margin-top: 1.8em; }
+}
+
+/* Body copy */
+.page__content p,
+.page__content li {
+  color: var(--text);
+}
+.page__content strong { color: var(--ink); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.6em 1.1em;
+  font-style: normal;
+}
+
+/* Inline code */
+code,
+p code,
+li code,
+a code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.08em 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+/* Code blocks keep the on-brand teal-dark base16 palette; just round + pad */
+div.highlighter-rouge,
+figure.highlight,
+pre.highlight {
+  border-radius: var(--radius);
+}
+.highlight { border-radius: var(--radius); }
+.page__content pre > code,
+.highlight code {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+/* Tables */
+table {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  box-shadow: none;
+}
+table th {
+  background: var(--brand);
+  color: var(--on-brand);
+  border-bottom: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+table td { border-bottom: 1px solid var(--border); color: var(--text); }
+table tr:last-child td { border-bottom: 0; }
+table tbody tr:nth-child(2n) { background: var(--surface-2); }
+
+/* Notices / callouts */
+.page__content {
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    color: var(--text);
+  }
+  .notice--warning { border-left-color: #b07a2e; }
+  .notice--danger  { border-left-color: #b0524e; }
+  .notice--success { border-left-color: #3f7d5a; }
+}
+
+/* Buttons */
+.btn {
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: transform 0.12s var(--ease), box-shadow 0.15s var(--ease), background 0.15s var(--ease);
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--primary {
+  background: var(--brand);
+  color: var(--on-brand) !important;
+}
+.btn--primary:hover { background: var(--brand-strong); }
+
+/* Images / figures */
+.page__content img { border-radius: var(--radius); }
+figure { border-radius: var(--radius); }
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: var(--radius);
+}
+
+/* Roomier reading measure on standard content pages */
+.page {
+  padding-right: 0;
+}

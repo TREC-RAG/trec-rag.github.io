@@ -29,11 +29,11 @@ Details on how to submit your runs will be shared shortly.
 
 * The preliminary schedule for TREC 2025 RAG is available [here](https://trec-rag.github.io/annoucements/2025-timeline/).
 
-* (<span style="color: red; font-weight: bold;">New</span>) The TREC 2025 RAG guidelines have been released and are accessible [here](https://trec-rag.github.io/annoucements/2025-track-guidelines/).
+* (<span class="trec-badge">New</span>) The TREC 2025 RAG guidelines have been released and are accessible [here](https://trec-rag.github.io/annoucements/2025-track-guidelines/).
 
-* (<span style="color: red; font-weight: bold;">New</span>) Topics released for TREC 2025 RAG [here](https://trec-rag.github.io/annoucements/2025-topics-released/).
+* (<span class="trec-badge">New</span>) Topics released for TREC 2025 RAG [here](https://trec-rag.github.io/annoucements/2025-topics-released/).
 
-* (<span style="color: red; font-weight: bold;">New</span>) Baselines and validator scripts released for TREC 2025 RAG [here](https://trec-rag.github.io/annoucements/2025-baselines/).
+* (<span class="trec-badge">New</span>) Baselines and validator scripts released for TREC 2025 RAG [here](https://trec-rag.github.io/annoucements/2025-baselines/).
 
 
 Stay tuned for more information for the TREC RAG 2025 Track!

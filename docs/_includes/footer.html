@@ -1,21 +1,49 @@
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
+<div class="trec-footer__top">
+  <div class="trec-footer__brand">
+    <span class="trec-footer__logo">{% include trec-mark.html %} TREC RAG</span>
+    <p>The TREC (NIST) Retrieval-Augmented Generation Track &mdash; a unified benchmark for systems that combine retrieval with large language models.</p>
+    <div class="trec-footer__social">
+      <a href="https://twitter.com/TREC_RAG" rel="nofollow noopener noreferrer" aria-label="TREC RAG on X / Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://github.com/TREC-RAG" rel="nofollow noopener noreferrer" aria-label="TREC RAG on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://huggingface.co/TREC-RAG" rel="nofollow noopener noreferrer" aria-label="TREC RAG on Hugging Face"><i class="fas fa-database" aria-hidden="true"></i></a>
+      <a href="https://groups.google.com/g/trec-rag-2026-participants" rel="nofollow noopener noreferrer" aria-label="TREC RAG mailing list"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    </div>
+  </div>
 
-    {% if site.footer.links %}
-      {% for link in site.footer.links %}
-        {% if link.label and link.url %}
-          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+  <div class="trec-footer__col">
+    <h3>Community</h3>
+    <ul>
+      <li><a href="https://trec.nist.gov/cfp.html" rel="nofollow noopener">Register for TREC</a></li>
+      <li><a href="https://groups.google.com/g/trec-rag-2026-participants" rel="nofollow noopener">Mailing list</a></li>
+      <li><a href="mailto:njedidi@uwaterloo.ca">SIGIR Slack</a></li>
+    </ul>
+  </div>
 
-    {% unless site.atom_feed.hide %}
-      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endunless %}
-  </ul>
+  <div class="trec-footer__col">
+    <h3>Data &amp; tools</h3>
+    <ul>
+      <li><a href="https://huggingface.co/TREC-RAG" rel="nofollow noopener">Hugging Face</a></li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-data" rel="nofollow noopener">Data repository</a></li>
+      <li><a href="https://github.com/TREC-RAG/trec-rag-skills" rel="nofollow noopener">Track guidelines (skills)</a></li>
+      <li><a href="https://github.com/castorini/RAGDoll" rel="nofollow noopener">RAGDoll toolkit</a></li>
+    </ul>
+  </div>
+
+  <div class="trec-footer__col">
+    <h3>Track</h3>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/categories/' | relative_url }}">Announcements</a></li>
+      <li><a href="{{ '/trec24/' | relative_url }}">TREC 2024</a></li>
+      <li><a href="{{ '/trec25/' | relative_url }}">TREC 2025</a></li>
+    </ul>
+  </div>
 </div>
 
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="trec-footer__bottom">
+  <div class="trec-footer__copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</div>
+  <div class="trec-footer__meta">
+    {% unless site.atom_feed.hide %}<a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-rss" aria-hidden="true"></i> Feed</a>{% endunless %}
+    <span>Built with Jekyll</span>
+  </div>
+</div>

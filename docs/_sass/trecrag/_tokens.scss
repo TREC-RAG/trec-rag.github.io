@@ -1,0 +1,153 @@
+/* ==========================================================================
+   TREC RAG design tokens
+   --------------------------------------------------------------------------
+   Runtime theming via CSS custom properties. Light is the default; dark is
+   applied either explicitly ([data-theme="dark"], set by the toggle) or by
+   the OS preference when the visitor hasn't chosen ([data-theme] unset).
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --surface-0: #f1f3f2; /* page background (pale grey) */
+  --surface-1: #ffffff; /* cards */
+  --surface-2: #e8edec; /* alternate bands / subtle fills */
+
+  /* Text */
+  --ink: #22424b;   /* headings */
+  --text: #2e4348;  /* body */
+  --muted: #61716f; /* secondary text */
+
+  /* Brand + interactive */
+  --brand: #284e57;
+  --brand-strong: #1e3a42;
+  --on-brand: #f1f3f2; /* text on a dark-teal fill */
+  --link: #285863;
+  --link-hover: #1e3a42;
+
+  /* Accents (kept subtle: borders, hover, tags) */
+  --accent: #8bb9b9;
+  --accent-soft: #bfd6d3;
+  --border: #d5e0dd;
+  --border-hover: #8bb9b9;
+
+  /* Tags */
+  --tag-bg: #e3efed;
+  --tag-text: #284e57;
+
+  /* Code */
+  --code-bg: #eef3f1;
+  --code-text: #1e3a42;
+
+  /* Dark contrast band (hero / footer) */
+  --band-bg: #223f47;
+  --band-ink: #f4f7f6;
+  --band-muted: #a9c4c2;
+  --band-border: rgba(255, 255, 255, 0.14);
+  --band-link: #cfe3e0;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(20, 49, 56, 0.06), 0 1px 1px rgba(20, 49, 56, 0.04);
+  --shadow-md: 0 6px 20px rgba(20, 49, 56, 0.10), 0 2px 6px rgba(20, 49, 56, 0.06);
+  --shadow-lg: 0 18px 40px rgba(20, 49, 56, 0.16);
+  --ring: 0 0 0 3px rgba(139, 185, 185, 0.45);
+
+  /* Typography */
+  --font-display: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Translucent nav background (pre-mixed to avoid color-mix parsing) */
+  --nav-bg: rgba(241, 243, 242, 0.82);
+
+  /* Layout */
+  --maxw: 1180px;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --nav-h: 4rem;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark — explicit toggle */
+:root[data-theme="dark"] {
+  --surface-0: #0e2429;
+  --surface-1: #143138;
+  --surface-2: #1b3c43;
+
+  --ink: #eaf1ef;
+  --text: #c7d6d3;
+  --muted: #90a5a2;
+
+  --brand: #8bb9b9;
+  --brand-strong: #bfd6d3;
+  --on-brand: #0e2429;
+  --link: #8bb9b9;
+  --link-hover: #bfd6d3;
+
+  --accent: #8bb9b9;
+  --accent-soft: #2a4a50;
+  --border: #24454c;
+  --border-hover: #3e6b72;
+
+  --tag-bg: #1b3c43;
+  --tag-text: #bfd6d3;
+
+  --code-bg: #10292f;
+  --code-text: #d6e3e0;
+
+  --band-bg: #0a1c20;
+  --band-ink: #eaf1ef;
+  --band-muted: #90a5a2;
+  --band-border: rgba(255, 255, 255, 0.10);
+  --band-link: #8bb9b9;
+
+  --nav-bg: rgba(14, 36, 41, 0.82);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.55);
+  --ring: 0 0 0 3px rgba(139, 185, 185, 0.35);
+}
+
+/* Dark — follow OS when the visitor hasn't chosen */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface-0: #0e2429;
+    --surface-1: #143138;
+    --surface-2: #1b3c43;
+
+    --ink: #eaf1ef;
+    --text: #c7d6d3;
+    --muted: #90a5a2;
+
+    --brand: #8bb9b9;
+    --brand-strong: #bfd6d3;
+    --on-brand: #0e2429;
+    --link: #8bb9b9;
+    --link-hover: #bfd6d3;
+
+    --accent: #8bb9b9;
+    --accent-soft: #2a4a50;
+    --border: #24454c;
+    --border-hover: #3e6b72;
+
+    --tag-bg: #1b3c43;
+    --tag-text: #bfd6d3;
+
+    --code-bg: #10292f;
+    --code-text: #d6e3e0;
+
+    --band-bg: #0a1c20;
+    --band-ink: #eaf1ef;
+    --band-muted: #90a5a2;
+    --band-border: rgba(255, 255, 255, 0.10);
+    --band-link: #8bb9b9;
+
+    --nav-bg: rgba(14, 36, 41, 0.82);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.55);
+    --ring: 0 0 0 3px rgba(139, 185, 185, 0.35);
+  }
+}

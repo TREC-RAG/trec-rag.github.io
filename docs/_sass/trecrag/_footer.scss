@@ -1,0 +1,117 @@
+/* ==========================================================================
+   TREC RAG footer
+   ========================================================================== */
+
+.page__footer {
+  margin-top: 0;
+  background: var(--band-bg) !important;
+  color: var(--band-ink) !important;
+  font-family: var(--font-sans);
+
+  footer {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 2rem;
+  }
+}
+
+.trec-footer__top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--band-border);
+}
+
+.trec-footer__brand {
+  .trec-footer__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--band-ink);
+    margin-bottom: 0.85rem;
+  }
+  img { height: 2rem; width: auto; border-radius: 6px; }
+  .trec-mark { width: 1.7rem; height: 1.7rem; flex: none; }
+  p {
+    color: var(--band-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 34ch;
+    margin: 0 0 1.1rem;
+  }
+}
+
+.trec-footer__social {
+  display: flex;
+  gap: 0.55rem;
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--band-border);
+    color: var(--band-ink);
+    transition: background 0.15s var(--ease), border-color 0.15s var(--ease), transform 0.12s var(--ease);
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--accent);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+  i { font-size: 1rem; }
+}
+
+.trec-footer__col {
+  h3 {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--band-muted);
+    margin: 0 0 1rem;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  li { margin: 0 0 0.6rem; }
+  a {
+    color: var(--band-ink);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.15s var(--ease);
+    &:hover { color: var(--accent); }
+  }
+}
+
+.trec-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.75rem;
+  color: var(--band-muted);
+  font-size: 0.82rem;
+
+  a { color: var(--band-link); text-decoration: none; }
+  a:hover { color: var(--accent); }
+  .trec-footer__meta { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+}
+
+@media (max-width: 768px) {
+  .trec-footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+  .trec-footer__brand { grid-column: 1 / -1; }
+  .page__footer footer { padding: 2.5rem 1.25rem 1.75rem; }
+}
+
+@media (max-width: 480px) {
+  .trec-footer__top { grid-template-columns: 1fr; }
+}

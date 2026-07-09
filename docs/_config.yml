@@ -13,21 +13,21 @@
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 remote_theme             : "TREC-RAG/trec-rag.github.io@main"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "trecrag" # custom TREC RAG deep-teal skin (docs/_sass/minimal-mistakes/skins/_trecrag.scss)
 
 # Site Settings
 locale                   : "en-US"
 title                    : "RAG"
 title_separator          : "-"
-subtitle                 : "TREC Retrieval-Augmented Generation" # site tagline that appears below site title in masthead
+subtitle                 : "Retrieval-Augmented Generation" # site tagline that appears below site title in masthead
 name                     : "TREC Retrieval-Augmented Generation (RAG)"
 description              : "TREC RAG Official Website"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/rag_icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+logo                     : "/assets/images/icon-512.png" # brand mark used for meta/structured data (masthead + footer render the inline SVG in _includes/trec-mark.html)
+masthead_title           : "TREC RAG" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -87,7 +87,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/og-image.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "RAG"
-  avatar           : "/assets/images/rag_icon.png"
+  avatar           : "/assets/images/icon-512.png"
   bio              : "Retrieval-Augmented Generation"
   location         : # "Somewhere"
   email            :
@@ -126,9 +126,6 @@ author:
     - label: "Dataset"
       icon: "fas fa-fw fa-database"
       url: "https://github.com/TREC-RAG/trec-rag-data/tree/main"
-    - label: "Discord"
-      icon: "fab fa-fw fa-discord"
-      url: "https://discord.gg/HkW7j3Qwb"
     - label: "Mailing List"
       icon: "fas fa-fw fa-envelope-square"
       url: "https://groups.google.com/g/trec-rag-2026-participants"
@@ -289,7 +286,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
@@ -300,4 +297,4 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false

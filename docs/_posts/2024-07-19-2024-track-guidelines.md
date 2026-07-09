@@ -388,6 +388,6 @@ We encourage participants to start encoding the MS MARCO V2.1 segment corpus (12
 We will soon release the test topics and once released would give a week or two to submit their participating runs.
 
 We encourage the community to provide us with constructive feedback regarding any task, or require us to further clarify any task.
-Please feel free to reach out to us via Twitter/Discord!
+Please feel free to reach out to us via Twitter!
 
 *The TREC RAG Organizers Send Their Regards.*

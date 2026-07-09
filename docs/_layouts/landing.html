@@ -1,0 +1,175 @@
+---
+layout: default
+---
+{% assign home = site.data.home %}
+<div class="landing">
+
+  <header class="trec-hero">
+    <div class="trec-hero__inner">
+      {% if home.hero.eyebrow %}<span class="trec-hero__eyebrow"><span class="dot"></span>{{ home.hero.eyebrow }}</span>{% endif %}
+      <h1>Retrieval-Augmented Generation Track</h1>
+      <p class="trec-hero__lead">{{ home.hero.lead }}</p>
+      <div class="trec-hero__cta">
+        {% if home.hero.primary %}<a class="trec-btn trec-btn--band-primary" href="{{ home.hero.primary.url }}">{{ home.hero.primary.label }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
+        {% for s in home.hero.secondary %}<a class="trec-btn trec-btn--on-band" href="{{ s.url }}">{{ s.label }}</a>{% endfor %}
+      </div>
+      {% if home.dates %}
+      <div class="trec-hero__dates">
+        {% for d in home.dates %}
+        <div class="trec-hero__date{% if d.key %} is-key{% endif %}">
+          <span class="k">{{ d.k }}</span><span class="v">{{ d.v }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if home.agents %}
+  <div class="trec-agents">
+    <div class="trec-agents__box">
+      <span class="ico"><i class="fas fa-robot" aria-hidden="true"></i></span>
+      <div>{{ home.agents }}</div>
+    </div>
+  </div>
+  {% endif %}
+
+  <section class="trec-section reveal">
+    <div class="trec-section__head">
+      <span class="trec-eyebrow">What's new</span>
+      <h2>Latest from the track</h2>
+    </div>
+    <div class="trec-grid trec-grid--auto">
+      {% for n in home.news %}
+      <div class="trec-card trec-news-card">
+        <div class="trec-news-card__head">
+          {% if n.new %}<span class="trec-badge">New</span>{% endif %}
+          <h3>{{ n.title }}</h3>
+        </div>
+        <p>{{ n.body }}</p>
+        {% if n.url %}<a class="trec-cardlink" href="{{ n.url }}">{{ n.cta | default: "Learn more" }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="trec-section reveal">
+    <div class="trec-section__head">
+      <span class="trec-eyebrow">Overview</span>
+      <h2>A unified benchmark for retrieval-augmented generation</h2>
+    </div>
+    <div class="trec-prose">
+      {% for p in home.overview %}<p>{{ p }}</p>{% endfor %}
+    </div>
+  </section>
+
+  <section id="tasks" class="trec-section reveal">
+    <div class="trec-section__head">
+      <span class="trec-eyebrow">Tasks</span>
+      <h2>Two tasks for 2026</h2>
+      <p>Pick one or both. Full input/output specs live in the agent-ready track guidelines.</p>
+    </div>
+    <div class="trec-grid trec-grid--2">
+      {% for t in home.tasks %}
+      <div class="trec-card trec-task-card trec-card--hover">
+        <span class="trec-task-card__mark">{{ t.mark }}</span>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.body }}</p>
+        <a class="trec-cardlink" href="{{ t.url }}">View task guidelines <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="timeline" class="trec-section trec-section--alt reveal">
+    <div class="trec-section__inner">
+      <div class="trec-section__head">
+        <span class="trec-eyebrow">Timeline</span>
+        <h2>Key dates for 2026</h2>
+      </div>
+      <ol class="trec-timeline">
+        {% for e in home.timeline %}
+        <li class="{% if e.key %}is-key{% endif %}">
+          <div class="k">{{ e.k }}</div>
+          <div class="d">{{ e.d }}</div>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section id="data" class="trec-section reveal">
+    <div class="trec-section__head">
+      <span class="trec-eyebrow">Data &amp; tools</span>
+      <h2>Everything you need to participate</h2>
+    </div>
+    <div class="trec-grid trec-grid--auto">
+      {% for tool in home.tools %}
+      <a class="trec-card trec-tool-card" href="{{ tool.url }}">
+        <span class="ico"><i class="{{ tool.icon }}" aria-hidden="true"></i></span>
+        <h3>{{ tool.title }}</h3>
+        <p>{{ tool.body }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="trec-section trec-section--alt reveal">
+    <div class="trec-section__inner">
+      <div class="trec-section__head">
+        <span class="trec-eyebrow">Get involved</span>
+        <h2>Join the 2026 track</h2>
+      </div>
+      <div class="trec-grid trec-grid--auto">
+        {% for c in home.community %}
+        <a class="trec-card trec-tool-card" href="{{ c.url }}">
+          <span class="ico"><i class="{{ c.icon }}" aria-hidden="true"></i></span>
+          <h3>{{ c.title }}</h3>
+          <p>{{ c.body }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="organizers" class="trec-section reveal">
+    <div class="trec-section__head">
+      <span class="trec-eyebrow">Organizers</span>
+      <h2>Organizing committee</h2>
+    </div>
+    <div class="trec-people">
+      {% for o in home.organizers %}
+      {% assign parts = o.name | split: " " %}
+      {% assign fi = parts[0] | slice: 0, 1 %}
+      {% assign li = parts | last | slice: 0, 1 %}
+      <div class="trec-person">
+        {% if o.img %}<span class="trec-avatar trec-avatar--photo"><img src="{{ o.img | relative_url }}" alt="{{ o.name }}" loading="lazy" width="52" height="52"></span>{% else %}<span class="trec-avatar">{{ fi }}{{ li }}</span>{% endif %}
+        <div>
+          <div class="trec-person__name">{{ o.name }}</div>
+          <div class="trec-person__aff">{{ o.aff }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="trec-section reveal">
+    <div class="trec-section__head">
+      <span class="trec-eyebrow">Previous iterations</span>
+      <h2>Explore past tracks</h2>
+    </div>
+    <div class="trec-grid trec-grid--2">
+      {% for p in home.previous %}
+      <a class="trec-card trec-prev-card trec-card--hover" href="{{ p.url | relative_url }}">
+        <div>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.body }}</p>
+        </div>
+        <span class="arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  {{ content }}
+</div>

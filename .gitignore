@@ -1,1 +1,15 @@
 docs/_site
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Local build tooling (system-Ruby vendored gems + bundler config)
+docs/vendor/
+docs/.bundle/
+
+# Jekyll build caches (regenerated on every build)
+.sass-cache/
+**/.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
