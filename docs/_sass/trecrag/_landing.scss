@@ -45,34 +45,38 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
+  max-width: 100%;
   font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 500;
+  line-height: 1.4;
   letter-spacing: 0.06em;
   color: var(--band-ink);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--band-border);
-  padding: 0.4rem 0.85rem;
-  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.9rem;
+  border-radius: 18px;
   margin-bottom: 1.5rem;
 }
 .trec-hero__eyebrow .dot {
   width: 0.5rem; height: 0.5rem; border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 4px rgba(139, 185, 185, 0.22);
+  flex: none;
 }
 
 .trec-hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 4rem);
-  line-height: 1.04;
+  font-size: clamp(2rem, 6.2vw, 4rem);
+  line-height: 1.05;
   letter-spacing: -0.03em;
   font-weight: 700;
   color: var(--band-ink);
   margin: 0 0 1.25rem;
   max-width: 18ch;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
-.trec-hero h1 .accent { color: var(--accent); }
 
 .trec-hero__lead {
   font-size: clamp(1.05rem, 2vw, 1.25rem);
@@ -103,8 +107,10 @@
   gap: 0.15rem;
   .k { font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--band-muted); }
   .v { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; color: var(--band-ink); }
-  &.is-key .v { color: var(--accent); }
 }
+/* Emphasize the deadline quietly: same layout, just a teal label + bold value */
+.trec-hero__date.is-key .k { color: var(--accent); }
+.trec-hero__date.is-key .v { font-weight: 700; }
 
 /* ---- Agents strip ------------------------------------------------------ */
 .trec-agents {
