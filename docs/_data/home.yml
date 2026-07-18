@@ -4,8 +4,8 @@
 # ==========================================================================
 
 hero:
-  eyebrow: "TREC 2026 · The first Agent-first track at TREC!"
-  lead: "A TREC (NIST) benchmark bringing the research community together to evaluate end-to-end systems that combine retrieval with large language models."
+  eyebrow: "TREC RAG 2026 · The first Agent-first track at TREC!"
+  lead: "A TREC evaluation track for retrieval and answer generation with supporting evidence."
   primary:
     label: "Register for TREC"
     url: "https://trec.nist.gov/cfp.html"
@@ -20,7 +20,7 @@ dates:
   - k: "Test topics"
     v: "Jul 6"
   - k: "Baselines"
-    v: "Jul 2026"
+    v: "Week of Jul 19"
   - k: "Submissions due"
     v: "Aug 8"
     key: true
@@ -44,7 +44,7 @@ news:
     cta: "Get the topics"
   - new: true
     title: "RAGDoll evaluation toolkit"
-    body: "Run the full RAG evaluation workflow end to end — from generating evaluation artifacts to scoring LLM responses."
+    body: "Run the full RAG evaluation workflow end to end, from generating evaluation artifacts to scoring LLM responses."
     url: "https://github.com/castorini/RAGDoll"
     cta: "Try RAGDoll"
   - title: "New corpus: NVIDIA ClimbMix-400b"
@@ -70,11 +70,11 @@ overview:
 tasks:
   - mark: "R"
     title: "Retrieval"
-    body: "The classic IR task: given a list of topics and access to the ClimbMix collection — via the Pyserini REST API or your own system — retrieve and rank the most relevant segments."
+    body: "The classic IR task: given a list of topics and access to the ClimbMix collection (through the Pyserini REST API or your own system), retrieve and rank the most relevant segments."
     url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md"
   - mark: "RAG"
     title: "Retrieval-Augmented Generation"
-    body: "Retrieve relevant evidence and return a summarized answer grounded in that evidence — citing the supporting segments so results stay reproducible."
+    body: "Retrieve relevant evidence and return a summarized answer grounded in that evidence, citing the supporting segments so results stay reproducible."
     url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/rag-task.md"
 
 # Timeline
@@ -82,7 +82,7 @@ timeline:
   - k: "Test topics released"
     d: "July 6, 2026"
   - k: "Baselines released"
-    d: "Soon after July 6"
+    d: "Week of July 19, 2026"
   - k: "Submission deadline"
     d: "August 8, 2026"
     key: true
@@ -141,7 +141,7 @@ organizers:
     aff: "Microsoft Research"
     img: "/assets/images/organizers/nandan-thakur.jpg"
   - name: "Nick Craswell"
-    aff: "Microsoft"
+    aff: "Microsoft Research"
   - name: "Ronak Pradeep"
     aff: "University of Waterloo"
     img: "/assets/images/organizers/ronak-pradeep.png"
