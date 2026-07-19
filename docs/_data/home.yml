@@ -51,6 +51,8 @@ news:
     body: "ClimbMix-400b replaces MS MARCO v2.1 for 2026. Access it now through the Pyserini REST API!"
     url: "https://x.com/TREC_RAG/status/2055319930766053632"
     cta: "Announcement"
+    secondary_url: "https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/pyserini-rest-api"
+    secondary_cta: "REST API SKILL"
 
 # Mission / overview (HTML allowed via block scalars)
 overview:

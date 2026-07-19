@@ -48,6 +48,7 @@ layout: default
         </div>
         <p>{{ n.body }}</p>
         {% if n.url %}<a class="trec-cardlink" href="{{ n.url }}">{{ n.cta | default: "Learn more" }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
+        {% if n.secondary_url %}<a class="trec-cardlink" href="{{ n.secondary_url }}">{{ n.secondary_cta | default: "Learn more" }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
       </div>
       {% endfor %}
     </div>
