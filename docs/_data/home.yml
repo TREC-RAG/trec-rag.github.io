@@ -5,7 +5,7 @@
 
 hero:
   eyebrow: "TREC RAG 2026 · The first Agent-first track at TREC!"
-  lead: "A TREC evaluation track for retrieval and answer generation with supporting evidence."
+  lead: "A TREC evaluation track for studying and benchmarking systems which combine retrieval and generation."
   primary:
     label: "Register for TREC"
     url: "https://trec.nist.gov/cfp.html"
@@ -44,11 +44,11 @@ news:
     cta: "Get the topics"
   - new: true
     title: "RAGDoll evaluation toolkit"
-    body: "Run the full RAG evaluation workflow end to end, from generating evaluation artifacts to scoring LLM responses."
+    body: "Run the full TREC RAG evaluation workflow end to end, from generating evaluation artifacts to scoring LLM responses."
     url: "https://github.com/castorini/RAGDoll"
     cta: "Try RAGDoll"
   - title: "New corpus: NVIDIA ClimbMix-400b"
-    body: "ClimbMix-400b replaces MS MARCO v2.1, accessed through the Pyserini REST API."
+    body: "ClimbMix-400b replaces MS MARCO v2.1 for 2026. Access it now through the Pyserini REST API!"
     url: "https://x.com/TREC_RAG/status/2055319930766053632"
     cta: "Announcement"
 
@@ -154,8 +154,6 @@ organizers:
 # Previous iterations
 previous:
   - title: "TREC RAG 2024"
-    body: "The inaugural track: three tasks over MS MARCO v2.1, with UMBRELA relevance judgments."
     url: "/trec24/"
   - title: "TREC RAG 2025"
-    body: "Narrative topics, an experimental relevance-judgment subtask, and refined nugget evaluation."
     url: "/trec25/"

@@ -161,10 +161,7 @@ layout: default
     <div class="trec-grid trec-grid--2">
       {% for p in home.previous %}
       <a class="trec-card trec-prev-card trec-card--hover" href="{{ p.url | relative_url }}">
-        <div>
-          <h3>{{ p.title }}</h3>
-          <p>{{ p.body }}</p>
-        </div>
+        <h3>{{ p.title }}</h3>
         <span class="arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
       </a>
       {% endfor %}
