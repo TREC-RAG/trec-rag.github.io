@@ -72,11 +72,11 @@ overview:
 tasks:
   - mark: "R"
     title: "Retrieval"
-    body: "The classic IR task: given a list of topics and access to the ClimbMix collection (through the Pyserini REST API or your own system), retrieve and rank the most relevant segments."
+    body: "The classic IR task: given a set of narratives and access to the ClimbMix collection, retrieve and rank the most relevant segments."
     url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md"
   - mark: "RAG"
     title: "Retrieval-Augmented Generation"
-    body: "Retrieve relevant evidence and return a summarized answer grounded in that evidence, citing the supporting segments so results stay reproducible."
+    body: "Given a set of narratives, retrieve relevant evidence from the ClimbMix collection and return a summarized answer grounded in that evidence."
     url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/rag-task.md"
 
 # Timeline
