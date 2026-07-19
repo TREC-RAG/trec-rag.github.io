@@ -48,6 +48,7 @@ layout: default
         </div>
         <p>{{ n.body }}</p>
         {% if n.url %}<a class="trec-cardlink" href="{{ n.url }}">{{ n.cta | default: "Learn more" }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
+        {% if n.secondary_url %}<a class="trec-cardlink" href="{{ n.secondary_url }}">{{ n.secondary_cta | default: "Learn more" }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
       </div>
       {% endfor %}
     </div>
@@ -161,10 +162,7 @@ layout: default
     <div class="trec-grid trec-grid--2">
       {% for p in home.previous %}
       <a class="trec-card trec-prev-card trec-card--hover" href="{{ p.url | relative_url }}">
-        <div>
-          <h3>{{ p.title }}</h3>
-          <p>{{ p.body }}</p>
-        </div>
+        <h3>{{ p.title }}</h3>
         <span class="arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
       </a>
       {% endfor %}
