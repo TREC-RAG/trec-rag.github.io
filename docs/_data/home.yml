@@ -14,13 +14,13 @@ hero:
       url: "https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines"
     - label: "Test topics"
       url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/test-data"
+    - label: "Baselines"
+      url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/baselines"
 
 # Compact key-date chips under the hero
 dates:
   - k: "Test topics"
     v: "Jul 6"
-  - k: "Baselines"
-    v: "Week of Jul 19"
   - k: "Submissions due"
     v: "Aug 8"
     key: true
