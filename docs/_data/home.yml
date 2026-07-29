@@ -153,6 +153,13 @@ organizers:
     aff: "University of Waterloo"
     img: "/assets/images/organizers/jimmy-lin.jpg"
 
+# Related tracks at TREC 2026
+related_tracks:
+  - title: "TREC RAGTIME"
+    url: "https://trec-ragtime.github.io/"
+  - title: "TREC AutoJudge"
+    url: "https://trec-auto-judge.cs.unh.edu/"
+
 # Previous iterations
 previous:
   - title: "TREC RAG 2024"

@@ -154,10 +154,30 @@ layout: default
     </div>
   </section>
 
+  {% if home.related_tracks %}
+  <section class="trec-section trec-section--alt reveal">
+    <div class="trec-section__inner">
+      <div class="trec-section__head">
+        <span class="trec-eyebrow">Also at TREC 2026</span>
+        <h2>Explore related TREC tracks</h2>
+        <p>Consider also participating in other RAG-related tracks at TREC 2026.</p>
+      </div>
+      <div class="trec-grid trec-grid--2">
+        {% for track in home.related_tracks %}
+        <a class="trec-card trec-prev-card trec-card--hover" href="{{ track.url }}">
+          <h3>{{ track.title }}</h3>
+          <span class="arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
   <section class="trec-section reveal">
     <div class="trec-section__head">
       <span class="trec-eyebrow">Previous iterations</span>
-      <h2>Explore past tracks</h2>
+      <h2>Explore past TREC RAG tracks</h2>
     </div>
     <div class="trec-grid trec-grid--2">
       {% for p in home.previous %}
