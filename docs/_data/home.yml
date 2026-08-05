@@ -16,6 +16,8 @@ hero:
       url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/test-data"
     - label: "Baselines"
       url: "https://github.com/TREC-RAG/trec-rag-data/tree/main/trec-rag-2026/baselines"
+    - label: "Submit here!"
+      url: "https://ir.nist.gov/evalbase/conf/trec-2026"
 
 # Compact key-date chips under the hero
 dates:
@@ -34,6 +36,12 @@ agents: >
   <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills/trec-rag-2026-track-guidelines">TREC RAG 2026 Track Guidelines skill</a>.
   For other track skills, use
   <a href="https://github.com/TREC-RAG/trec-rag-skills/tree/main/skills">TREC-RAG/trec-rag-skills</a>.
+
+deadline_notice: >
+  <strong>Runs are due on August 8th!</strong> You may submit up to 10 runs per
+  task. <a href="https://ir.nist.gov/evalbase/conf/trec-2026">Submit your runs
+  through Evalbase</a> and report a priority on each submission form, so we can
+  prioritize those runs for manual assessments.
 
 # What's new — key information cards
 news:

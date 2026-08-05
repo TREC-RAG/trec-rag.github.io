@@ -34,6 +34,11 @@
   --tag-bg: #e3efed;
   --tag-text: #284e57;
 
+  /* Deadline notice */
+  --deadline-bg: #fff1f0;
+  --deadline-border: #d92d20;
+  --deadline-text: #7a271a;
+
   /* Code */
   --code-bg: #eef3f1;
   --code-text: #1e3a42;
@@ -92,6 +97,10 @@
   --tag-bg: #1b3c43;
   --tag-text: #bfd6d3;
 
+  --deadline-bg: #3b1d1c;
+  --deadline-border: #f97066;
+  --deadline-text: #fecdca;
+
   --code-bg: #10292f;
   --code-text: #d6e3e0;
 
@@ -133,6 +142,10 @@
 
     --tag-bg: #1b3c43;
     --tag-text: #bfd6d3;
+
+    --deadline-bg: #3b1d1c;
+    --deadline-border: #f97066;
+    --deadline-text: #fecdca;
 
     --code-bg: #10292f;
     --code-text: #d6e3e0;

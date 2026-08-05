@@ -142,6 +142,36 @@
 }
 .trec-agents__box a { font-weight: 500; }
 
+.trec-deadline {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--deadline-bg);
+  border: 1px solid var(--deadline-border);
+  border-left-width: 4px;
+  border-radius: var(--radius);
+  color: var(--deadline-text);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  box-shadow: var(--shadow-sm);
+}
+.trec-deadline .ico {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--deadline-border);
+}
+.trec-deadline p { margin: 0; }
+.trec-deadline strong { color: inherit; }
+.trec-deadline a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+.trec-deadline a:hover { color: inherit; }
+
 /* ---- Generic grid ------------------------------------------------------ */
 .trec-grid { display: grid; gap: 1.25rem; }
 .trec-grid--2 { grid-template-columns: repeat(2, 1fr); }
