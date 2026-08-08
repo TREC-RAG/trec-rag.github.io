@@ -80,11 +80,11 @@ overview:
 tasks:
   - mark: "R"
     title: "Retrieval"
-    body: "Given a set of narratives, return a ranked list containing all and only the ClimbMix documents the system predicts are relevant to the narrative and useful as evidence for answer generation."
+    body: "Given a narrative, return a ranked list containing all and only the ClimbMix documents that the system predicts are relevant to that narrative and useful as evidence for answer generation."
     url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md"
   - mark: "RAG"
     title: "Retrieval-Augmented Generation"
-    body: "Given a set of narratives, retrieve relevant evidence from the ClimbMix collection and return a summarized answer grounded in that evidence."
+    body: "Given a narrative, retrieve relevant evidence from the ClimbMix collection and return a summarized answer grounded in that evidence."
     url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/rag-task.md"
 
 # Timeline
