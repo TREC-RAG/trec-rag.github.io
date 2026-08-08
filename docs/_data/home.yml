@@ -80,7 +80,7 @@ overview:
 tasks:
   - mark: "R"
     title: "Retrieval"
-    body: "The classic IR task: given a set of narratives and access to the ClimbMix collection, retrieve and rank the most relevant segments."
+    body: "Given a set of narratives, return a ranked list containing all and only the ClimbMix documents the system predicts are relevant to the narrative and useful as evidence for answer generation."
     url: "https://github.com/TREC-RAG/trec-rag-skills/blob/main/skills/trec-rag-2026-track-guidelines/references/retrieval-task.md"
   - mark: "RAG"
     title: "Retrieval-Augmented Generation"
